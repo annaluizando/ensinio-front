@@ -9,7 +9,7 @@ const IntroContainer = styled.div`
     display: flex;
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: 7rem;
 `;
 
 const IntroMainImage = styled.div`

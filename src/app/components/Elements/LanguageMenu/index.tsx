@@ -27,7 +27,7 @@ export default function LanguageMenu() {
 
     return (
         <LanguageContainer>
-            <Text $size="x_small" $weight="medium" color="white"> {currentlanguage} </Text>
+            {/* <Text $size="x_small" $weight="medium" color="white"> {currentlanguage} </Text> */}
             <ToggleButton onClick={handleLanguageMenu} />
 
             {languageMenu && (
