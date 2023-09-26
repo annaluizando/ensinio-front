@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('../../../public/fonts/Inter.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Degular';
+    src: url('../../../public/fonts/Degular.ttf') format('truetype');
+}
