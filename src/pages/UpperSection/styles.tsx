@@ -34,7 +34,7 @@ const ButtonsContainer = styled.div`
 `;
 
 const TextContainer = styled.div`
-    width: 450px;
+    width: 28.125rem;
     height: 212px;
     display: flex;
     flex-direction: column;
