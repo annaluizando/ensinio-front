@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <title>Ensinio Front</title>
         <meta name="description" content="Sua escola online poderosa e lucrativa" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/logo.svg" />
+        <link rel="icon" href="/logo-symbol.svg" />
       </Head>
 
       <main className={inter.className}>

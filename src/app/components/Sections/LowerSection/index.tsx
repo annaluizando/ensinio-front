@@ -5,8 +5,27 @@ import Image from "next/image";
 import rocket from "../../../../../public/assets/icons/rocket.svg";
 import arrow from "../../../../../public/assets/shapes/arrow.svg";
 import line_purple from "../../../../../public/assets/shapes/line_purple.svg";
+import { useEffect, useState } from 'react';
+import { getCard } from "@/app/types/api/api";
+import { ResourceData } from "@/app/types/elements/ResourcesCard";
 
 export default function LowerSection() {
+    const [resourcesData, setResourcesData] = useState<ResourceData[]>([]);
+
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                const data = await getCard();
+                console.log(data);
+                setResourcesData(data);
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            }
+        }
+
+        fetchData();
+    }, []);
+
     return (
         <LowerSectionContainer>
             <LSContentContainer>
@@ -23,9 +42,9 @@ export default function LowerSection() {
                 </UpperContainer>
 
                 <ResourcesGroupContainer>
-                    <ResourcesCard $url="./assets/icons/icon-app.svg" title="Trilhas de etapas" description="Crie planos de estudos especificando aulas e/ou cursos e definindo a ordem que seus alunos devem estudar."></ResourcesCard>
-                    <ResourcesCard $url="./assets/icons/icon-playlists.svg" title="Playlists" description="Transforme uma coleção em uma playlist para poder ver vídeos e áudios em sequência offline."></ResourcesCard>
-                    <ResourcesCard $url="./assets/icons/icon-folder.svg" title="Coleções" description="Crie coleções, adicione conteúdos, reorganize ítens e deixe tudo do seu jeito para melhorar a experiência."></ResourcesCard>
+                    {resourcesData.map((resource) => (
+                        <ResourcesCard key={resource.id} data={resource} $url={`./assets/icons/${resource.id}.svg`} />
+                    ))}
                 </ResourcesGroupContainer>
 
                 <LongLine />

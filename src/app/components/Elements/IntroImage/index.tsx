@@ -30,7 +30,7 @@ const IntroMainImage = styled.div`
 
 const IntroShape = styled.div`
     width: 560px;
-    height: 484px;
+    height: 507px;
     position: absolute;
     bottom: 0;
     right: 0;

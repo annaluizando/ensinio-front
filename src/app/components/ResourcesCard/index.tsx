@@ -1,13 +1,15 @@
+import { ResourceData } from "@/app/types/elements/ResourcesCard";
 import { Text } from "../Elements/text";
 import { RTextContainer, ResourcesContainer, ResourcesIcon } from "./styles";
 
 interface ResourcesCardProps {
-    title: string;
-    description: string;
+    data: ResourceData;
     $url: string;
 }
 
-export default function ResourcesCard({ title, description, $url }: ResourcesCardProps) {
+export default function ResourcesCard({ data, $url }: ResourcesCardProps) {
+    const { title, description } = data;
+
     return (
         <ResourcesContainer>
             <ResourcesIcon $url={$url} />
