@@ -1,20 +1,28 @@
 import Image from "next/image";
-import { ButtonsContainer, DevicesContainer, IntroContainer, SectionContainer, TextContainer } from "./styles";
+import { ButtonsContainer, DesignIconsContainer, DevicesContainer, IntroContainer, SectionContainer, TextContainer } from "./styles";
 import devices from "../../../public/assets/icons/devices.png";
 import { Text } from "@/app/components/Elements/text";
 import { FullBtn } from "@/app/components/Buttons/FullBtn";
 import VideoBtn from "@/app/components/Buttons/VideoBtn";
 import IntroImage from "@/app/components/Elements/IntroImage";
-
+import wplaylist_icon from "../../../public/assets/icons/icon-playlistsw.svg";
+import certified_icon from "../../../public/assets/icons/icon-certified.svg";
 
 export default function UpperSection() {
     return (
         <SectionContainer>
+
+            <DesignIconsContainer>
+                <Image src={wplaylist_icon} width={82.50} height={82.50} alt="design-icons" className="icon-play" />
+                <Image src={certified_icon} width={67.355} height={67.355} alt="design-icons" className="icon-cert" />
+                <Image src={wplaylist_icon} width={82.50} height={82.50} alt="design-icons" className="icon-play" />
+            </DesignIconsContainer>
+
             <IntroContainer>
                 <IntroImage />
                 <DevicesContainer>
                     <Image src={devices} height={24} width={24} alt="devices"></Image>
-                    <Text $case="upper" $size="small" $weight="semibold" $family="secondary" color="white" $spacing="wide">Plataforma all in one</Text>
+                    <Text $case="upper" $size="small" $weight="semibold" $family="secondary" color="white" $spacing="wider">Plataforma all in one</Text>
                 </DevicesContainer>
 
                 <TextContainer>

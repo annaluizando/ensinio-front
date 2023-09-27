@@ -3,17 +3,17 @@ import { FullBtn } from '@/app/components/Buttons/FullBtn'
 import { Text } from '@/app/components/Elements/text'
 import NavBar from '@/app/components/NavBar'
 import ResourcesCard from '@/app/components/ResourcesCard'
-import UpperSection from './UpperSection'
-import LowerSection from './LowerSection'
+import LowerSection from '../app/components/Sections/LowerSection'
+import { MainContainer } from '@/app/styles/GlobalStyles'
+import UpperSection from '@/app/components/Sections/UpperSection'
 
 
 export default function Home() {
   return (
-    <>
+    <MainContainer>
       <NavBar />
       <UpperSection />
       <LowerSection />
-      <Text $family='secondary' color="white" $size="x_large" $weight="medium">Queremos</Text>
-    </>
+    </ MainContainer>
   )
 }

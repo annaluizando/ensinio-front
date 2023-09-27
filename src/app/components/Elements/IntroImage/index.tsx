@@ -9,14 +9,22 @@ const IntroContainer = styled.div`
     display: flex;
     position: absolute;
     bottom: 0;
-    right: 7rem;
+    right: 0;
+    @media (min-width: 1135px) and (max-width: 1250px) {
+      right: 1rem;
+    }
+
+    @media (max-width: 1135px) {
+      display: none;
+    }
+
 `;
 
 const IntroMainImage = styled.div`
     width: 529px;
     height: 533px;
     position: absolute;
-    z-index: 9;
+    z-index: 1;
     bottom: 0;
 `;
 

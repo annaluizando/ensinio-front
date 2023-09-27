@@ -10,7 +10,10 @@ const VideoBtnContainer = styled.div`
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
+    
 `;
+
+
 
 export default function VideoBtn() {
     return (

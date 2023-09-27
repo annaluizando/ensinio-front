@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components'
 import { theme } from '@/app/styles/index'
 
 import { Inter } from 'next/font/google'
-import GlobalStyles from '@/app/styles/GlobalStyles'
+import { GlobalStyles } from '@/app/styles/GlobalStyles'
 import Head from 'next/head'
 
 

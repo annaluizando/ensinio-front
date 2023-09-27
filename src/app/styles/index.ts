@@ -2,7 +2,8 @@ import "@/app/styles/fonts.css";
 
 export const theme = {
   colors: {
-    white: "#E7E7E9",
+    white: "#FFFFFF",
+    light_gray: "#E7E7E9",
     gray: "#423D51",
     black: "#130C25",
     purple_dark: "#432E98",
@@ -18,6 +19,8 @@ export const theme = {
       secondary: "'Degular', sans-serif",
     },
     sizes: {
+      xxx_small: "0.813rem", // 13px
+      xx_small: "0.875rem", //14px
       x_small: "0.938rem", // 15px
       small: "1rem", // 16px
       medium: "1.25rem", // 20px
@@ -39,7 +42,8 @@ export const theme = {
     },
     spacings: {
         normal: "normal",
-        wide: "0.15rem", // 2.4px
+        wide: "0.131rem", // 2.1px
+        wider: "0.15rem", // 2.4px
     }
   },
   media: {

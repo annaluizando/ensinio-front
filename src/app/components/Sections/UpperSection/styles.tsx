@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const SectionContainer = styled.div`
-    width: 100%;
+    width: 100vw;
     height: 700px;
     background-image: ${props => props.theme.colors.gradient};
     position: relative;
@@ -11,11 +11,14 @@ const IntroContainer = styled.div`
     width: 87.50%;
     height: 100%;
     display: grid;
-    justify-content: start;
+    justify-items: start;
     align-items: center;
-    padding-top: 6.281rem;
-    padding-bottom: 6.281rem;
-    padding-left: 7rem;
+    align-content: space-evenly;
+    margin: 0;
+    position: relative;
+    @media (max-width: 1135px) {
+      padding-right: 0;
+    }
 `;
 
 const DevicesContainer = styled.div`
@@ -41,11 +44,19 @@ const TextContainer = styled.div`
     justify-content: space-between;
 `;
 
+const DesignIconsContainer = styled.div`
+    width: 96.90%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+`;
+
 export {
     SectionContainer,
     IntroContainer,
     DevicesContainer,
     ButtonsContainer,
     TextContainer,
+    DesignIconsContainer,
 }
 
