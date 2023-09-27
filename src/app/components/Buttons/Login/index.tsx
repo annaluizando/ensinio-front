@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Text } from "../../Elements/text";
 import styled from "styled-components";
+import { LanguageMenuProps } from "@/app/types/elements/LanguageMenu";
 
 const LoginContainer = styled.div`
     width: 73px;
@@ -11,11 +12,11 @@ const LoginContainer = styled.div`
     cursor: pointer;
 `;
 
-export default function Login() {
+export default function Login({ textColor = "white", textWeight = "semibold" }: LanguageMenuProps): JSX.Element {
     return (
         <LoginContainer>
             <Image src="./assets/icons/user-profile.svg" alt="profile-icon" height={20} width={20} />
-            <Text $size="x_small" color="white" $weight="semibold">Entrar</Text>
+            <Text $size="x_small" color={textColor} $weight={textWeight}>Entrar</Text>
         </LoginContainer>
     )
 }

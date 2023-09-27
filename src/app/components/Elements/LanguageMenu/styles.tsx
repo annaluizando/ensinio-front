@@ -6,6 +6,7 @@ const LanguageContainer = styled.div`
     height: 16px;
     display: flex;
     justify-content: space-between;
+    
 `;
 
 const ToggleButton = styled.button`
@@ -25,7 +26,12 @@ const LangPopUpContainer = styled.div`
     border-radius: 8px;
     position: absolute;
     top: 4rem;
-
+    right: 3rem;
+    @media (max-width: 1250px) {
+      top: 20rem;
+      right: 0;
+      width: 150px;
+    }
 `;
 
 const SelectedContainer = styled.div`
@@ -35,6 +41,9 @@ const SelectedContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+        @media (max-width: 1250px) {
+        width: 100%;
+        }
 `;
 
 const SelectedContent = styled.div`
@@ -45,6 +54,7 @@ const SelectedContent = styled.div`
     justify-content: space-between;
     background: linear-gradient(90deg, #5F41D9 -880.48%, rgba(95, 65, 217, 0.00) 100%);
     position: absolute;
+    left: 0;
 `;
 
 // const LangContainer = styled.div`
@@ -60,9 +70,12 @@ const LangItem = styled.div`
     border-radius: 8px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     cursor: pointer;
+    padding: 1rem;
+    padding-left: 1.5rem;
 
+  
   &:hover {
     background: linear-gradient(90deg, #5F41D9 -880.48%, rgba(95, 65, 217, 0.00) 100%);
   }

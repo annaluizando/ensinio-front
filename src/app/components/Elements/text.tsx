@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 interface TextProps {
   $size?: FontSize;
-  color?: ColorTheme;
-  $weight?: FontWeight;
+  color?: ColorTheme | string;
+  $weight?: FontWeight | string;
   $family?: FontFamily;
   $case?: TextCase;
   $spacing?: TextSpacing;

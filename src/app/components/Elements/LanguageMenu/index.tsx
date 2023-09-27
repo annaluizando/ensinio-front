@@ -7,8 +7,10 @@ import brazil from "../../../../../public/assets/icons/brazil.svg";
 import usa from "../../../../../public/assets/icons/usa.svg";
 import spain from "../../../../../public/assets/icons/spain.svg";
 import { LangItem, LangPopUpContainer, LanguageContainer, MiniLangContainer, SelectedContainer, SelectedContent, ToggleButton } from "./styles";
+import { LanguageMenuProps } from "@/app/types/elements/LanguageMenu";
 
-export default function LanguageMenu(): JSX.Element {
+
+export default function LanguageMenu({ textColor = "white" }: LanguageMenuProps): JSX.Element {
     const [languageMenu, setLanguageMenu] = useState(false);
     const [currentLanguage, setCurrentLanguage] = useState("PT");
 
@@ -29,7 +31,7 @@ export default function LanguageMenu(): JSX.Element {
 
     return (
         <LanguageContainer>
-            <Text $size="x_small" $weight="medium" color="white"> {currentLanguage} </Text>
+            <Text $size="x_small" $weight="medium" color={textColor}> {currentLanguage} </Text>
             <ToggleButton onClick={handleLanguageMenu}>
                 <Image src={polygon} width={10} height={8} alt="toggle" />
             </ToggleButton>

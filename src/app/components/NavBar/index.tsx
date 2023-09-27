@@ -46,7 +46,9 @@ export default function NavBar() {
 
             <MenuBtn onClick={handleMenu}><Image src={menuIcon} width={24} height={24} alt="menu-icon" /></MenuBtn>
             {menu && (
-                <MenuOpen />
+                <>
+                    <MenuOpen />
+                </>
             )}
         </NavBarContainer>
     )
