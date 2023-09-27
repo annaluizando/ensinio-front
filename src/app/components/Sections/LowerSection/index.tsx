@@ -2,9 +2,9 @@ import ResourcesCard from "@/app/components/ResourcesCard";
 import { DetailsContainer, DetailsnResourcesContainer, FooterContainer, LSContentContainer, LongLine, LowerSectionContainer, ResourcesGroupContainer, RocketContainer, SeeMoreContainer, UpperContainer } from "./styles";
 import { Text } from "@/app/components/Elements/text";
 import Image from "next/image";
-import rocket from "../../../public/assets/icons/rocket.svg";
-import arrow from "../../../public/assets/shapes/arrow.svg";
-import line_purple from "../../../public/assets/shapes/line_purple.svg";
+import rocket from "../../../../../public/assets/icons/rocket.svg";
+import arrow from "../../../../../public/assets/shapes/arrow.svg";
+import line_purple from "../../../../../public/assets/shapes/line_purple.svg";
 
 export default function LowerSection() {
     return (
