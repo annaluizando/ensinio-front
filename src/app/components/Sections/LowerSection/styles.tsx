@@ -50,9 +50,15 @@ const FooterContainer = styled.div`
     justify-content: space-between;
     margin-top: 2.25rem;
 
-    @media (max-width: 770px) {
+    @media (min-width: 322px) and (max-width: 770px) {
       flex-direction: column;
       height: 120px;
+      align-items: flex-start;
+    }
+
+    @media (max-width: 322px) {
+      flex-direction: column;
+      height: 100%;
       align-items: flex-start;
     }
 `;

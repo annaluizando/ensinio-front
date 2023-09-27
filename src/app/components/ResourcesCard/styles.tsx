@@ -16,9 +16,14 @@ const ResourcesContainer = styled.div`
 `;
 
 const ResourcesIcon = styled.div<ResourcesIconProps>`
-    height: 40px;
     width: 40px;
+    height: 40px;
     background-image: url(${props => props.$url});
+
+    @media (max-width: 370px){
+        height: 50px;
+
+    }
 `;
 
 const RTextContainer = styled.div`
@@ -28,6 +33,7 @@ const RTextContainer = styled.div`
     flex-direction: column;
     justify-content: space-around;
       @media (max-width: 370px) {
+        height: 100%;
         width: 80%;
     }
 `;

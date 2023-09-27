@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ButtonsContainer, DesignIconsContainer, DevicesContainer, IntroContainer, SectionContainer, TextContainer } from "./styles";
+import { ButtonsContainer, DesignIconsContainer, DevicesContainer, IntroContainer, SectionContainer, TextContainer, USContentContainer } from "./styles";
 import devices from "../../../../../public/assets/icons/devices.png";
 import { Text } from "@/app/components/Elements/text";
 import { FullBtn } from "@/app/components/Buttons/FullBtn";
@@ -20,20 +20,23 @@ export default function UpperSection() {
 
             <IntroContainer>
                 <IntroImage />
-                <DevicesContainer>
-                    <Image src={devices} height={24} width={24} alt="devices"></Image>
-                    <Text $case="upper" $size="small" $weight="semibold" $family="secondary" color="white" $spacing="wider">Plataforma all in one</Text>
-                </DevicesContainer>
 
-                <TextContainer>
-                    <Text $weight="medium" $size="x_large" color="white">Sua escola online poderosa e lucrativa</Text>
-                    <Text $weight="regular" $size="small" color="white">Tenha sua própria escola online 100% white label com rede social, gamificação, clube de assinaturas, ecommerce e sistema EAD completo.</Text>
-                </TextContainer>
+                <USContentContainer>
+                    <DevicesContainer>
+                        <Image src={devices} height={24} width={24} alt="devices"></Image>
+                        <Text $case="upper" $size="small" $weight="semibold" $family="secondary" color="white" $spacing="wider">Plataforma all in one</Text>
+                    </DevicesContainer>
 
-                <ButtonsContainer>
-                    <FullBtn>Começar agora</FullBtn>
-                    <VideoBtn />
-                </ButtonsContainer>
+                    <TextContainer>
+                        <Text $weight="medium" $size="x_large" color="white">Sua escola online poderosa e lucrativa</Text>
+                        <Text $weight="regular" $size="small" color="white">Tenha sua própria escola online 100% white label com rede social, gamificação, clube de assinaturas, ecommerce e sistema EAD completo.</Text>
+                    </TextContainer>
+
+                    <ButtonsContainer>
+                        <FullBtn>Começar agora</FullBtn>
+                        <VideoBtn />
+                    </ButtonsContainer>
+                </USContentContainer>
 
             </IntroContainer>
         </SectionContainer>

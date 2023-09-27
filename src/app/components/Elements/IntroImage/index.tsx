@@ -11,7 +11,6 @@ const IntroContainer = styled.div`
     bottom: 0;
     right: 0;
     @media (min-width: 1135px) and (max-width: 1250px) {
-      right: 1rem;
     }
 
     @media (max-width: 1135px) {
@@ -26,6 +25,7 @@ const IntroMainImage = styled.div`
     position: absolute;
     z-index: 1;
     bottom: 0;
+    right: 0;
 `;
 
 const IntroShape = styled.div`
@@ -33,6 +33,7 @@ const IntroShape = styled.div`
     height: 484px;
     position: absolute;
     bottom: 0;
+    right: 0;
 `;
 
 export default function IntroImage() {
