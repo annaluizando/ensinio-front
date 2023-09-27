@@ -8,6 +8,7 @@ const SolutionsContainer = styled.div`
     display : flex;
     width: 235px;
     height: 40px;
+    justify-content: space-between;
 `;
 
 const SolutionsIcon = styled.div<SolutionsIconProps>`

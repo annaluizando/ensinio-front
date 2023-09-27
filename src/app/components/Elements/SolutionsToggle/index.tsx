@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import { Text } from "../text";
 import { useState } from "react";
 import polygon from "../../../../../public/assets/shapes/polygon.svg";
@@ -23,6 +23,17 @@ const ToggleButton = styled.button`
     cursor: pointer;
 `;
 
+// animation to be used in SolutionsPopUp
+const fadeInAnimation = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
+
 // general div, white background from solutions popup
 const SolutionsPopUpContainer = styled.div`
     width: 643px;
@@ -35,6 +46,9 @@ const SolutionsPopUpContainer = styled.div`
     justify-content: center;
     position: absolute;
     top: 4rem;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    animation-name: ${fadeInAnimation};
 `;
 
 // div that contains all Solutions Cards
