@@ -10,6 +10,9 @@ const ResourcesContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  @media (max-width: 370px) {
+        width: 100%;
+    }
 `;
 
 const ResourcesIcon = styled.div<ResourcesIconProps>`
@@ -24,6 +27,9 @@ const RTextContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+      @media (max-width: 370px) {
+        width: 80%;
+    }
 `;
 
 export {

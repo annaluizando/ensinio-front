@@ -36,7 +36,9 @@ const ResourcesGroupContainer = styled.div`
     @media (max-width: 1135px) {
       flex-direction: column;
       height: 570px;
+      
     }
+    
 `;
 
 // div that contains the last row of Lower Section, row 4
@@ -63,6 +65,9 @@ const RocketContainer = styled.div`
     align-items: center;
     justify-content: space-between;
     
+    @media (max-width: 580px) {
+        width: 90%;
+    }
 `;
 
 const SeeMoreContainer = styled.div`
@@ -81,6 +86,9 @@ const DetailsContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 390px) {
+        width: 100%;
+    }
 `;
 
 const LongLine = styled.hr`
@@ -99,7 +107,11 @@ const UpperContainer = styled.div`
     justify-content: space-between;
 
     @media (max-width: 1120px) {
-      height: 170px;
+      height: 15%;
+    }
+
+    @media (max-width: 335px) {
+        height: auto;
     }
 
 `;

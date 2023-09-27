@@ -29,11 +29,18 @@ const DevicesContainer = styled.div`
 `;
 
 const ButtonsContainer = styled.div`
-    width: 338px;
+    width: 21.125rem;
     height: 56px;
     display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 345px){
+        width: 100%;
+        justify-content: center;
+    }
 `;
 
 const TextContainer = styled.div`
@@ -42,6 +49,11 @@ const TextContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media (max-width: 470px) {
+        width: 95%;
+        height: auto;
+    }
 `;
 
 const DesignIconsContainer = styled.div`
