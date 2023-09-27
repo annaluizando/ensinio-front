@@ -16,7 +16,6 @@ export default function LowerSection() {
         async function fetchData() {
             try {
                 const data = await getCard();
-                console.log(data);
                 setResourcesData(data);
             } catch (error) {
                 console.error("Error fetching data:", error);
