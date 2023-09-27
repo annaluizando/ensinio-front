@@ -4,7 +4,7 @@ interface SolutionsIconProps {
     $url: string;
 }
 
-const SolutionsContainer = styled.div`
+const SolutionsCardContainer = styled.div`
     display : flex;
     width: 235px;
     height: 40px;
@@ -23,7 +23,7 @@ const STextContainer = styled.div`
 `;
 
 export {
-    SolutionsContainer,
+    SolutionsCardContainer,
     SolutionsIcon,
     STextContainer,
 }
