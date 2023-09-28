@@ -55,7 +55,8 @@ const SelectedContent = styled.div`
     justify-content: flex-end;
     background: linear-gradient(90deg, #5F41D9 -880.48%, rgba(95, 65, 217, 0.00) 100%);
     position: absolute;
-    right: 1rem;
+    padding: 1rem;
+    right: 0;
 `;
 
 // const LangContainer = styled.div`

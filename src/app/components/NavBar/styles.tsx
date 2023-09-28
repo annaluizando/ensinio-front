@@ -8,7 +8,7 @@ const NavBarContainer = styled.div`
     align-items: center;
     background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(15px);
-    position: absolute;
+    position: fixed;
     top: 0;
     z-index: 9;
 `;
