@@ -3,10 +3,11 @@ import styled from "styled-components";
 
 const LanguageContainer = styled.div`
     width: 38px;
-    height: 16px;
+    height: 40px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    
+    align-content: center;
 `;
 
 const ToggleButton = styled.button`
@@ -51,10 +52,10 @@ const SelectedContent = styled.div`
     height: 48px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     background: linear-gradient(90deg, #5F41D9 -880.48%, rgba(95, 65, 217, 0.00) 100%);
     position: absolute;
-    left: 0;
+    right: 1rem;
 `;
 
 // const LangContainer = styled.div`

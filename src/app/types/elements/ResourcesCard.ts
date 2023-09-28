@@ -1,5 +1,5 @@
 export interface ResourceData {
   id: number;
-  title: string;
-  description: string;
+  title: any;
+  description: any;
 }

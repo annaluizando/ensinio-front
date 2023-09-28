@@ -8,9 +8,13 @@ import line_purple from "../../../../../public/assets/shapes/line_purple.svg";
 import { useEffect, useState } from 'react';
 import { getCard } from "@/app/types/api/api";
 import { ResourceData } from "@/app/types/elements/ResourcesCard";
+import { useTranslation } from "next-i18next";
+
 
 export default function LowerSection() {
     const [resourcesData, setResourcesData] = useState<ResourceData[]>([]);
+    const { t } = useTranslation('common')
+
 
     useEffect(() => {
         async function fetchData() {
@@ -32,12 +36,12 @@ export default function LowerSection() {
                     <DetailsnResourcesContainer>
                         <DetailsContainer>
                             <Image src={line_purple} width={40} height={1} alt="line" />
-                            <Text $case="upper" $spacing="wider" $size="small" $weight="semibold" color="purple_dark">Pensamos em cada detalhe</Text>
+                            <Text $case="upper" $spacing="wider" $size="small" $weight="semibold" color="purple_dark">{t('lower_section.details')}</Text>
                         </DetailsContainer>
-                        <Text>Conheça alguns dos nossos recursos⚡️</Text>
+                        <Text>{t('lower_section.resources')}</Text>
                     </DetailsnResourcesContainer>
 
-                    <Text $size="large" $weight="medium" $family="secondary" color="black">Queremos que o aluno se sinta confortável enquanto aprende</Text>
+                    <Text $size="large" $weight="medium" $family="secondary" color="black">{t('lower_section.ideal')}</Text>
                 </UpperContainer>
 
                 <ResourcesGroupContainer>
@@ -51,11 +55,11 @@ export default function LowerSection() {
                 <FooterContainer>
                     <RocketContainer>
                         <Image src={rocket} height={32} width={32} alt="rocket" />
-                        <Text $size="small" $weight="medium" color="gray">Veja todos os outros recursos disponíveis para te ajudar </Text>
+                        <Text $size="small" $weight="medium" color="gray">{t('lower_section.rocket')}</Text>
                     </RocketContainer>
 
                     <SeeMoreContainer>
-                        <Text $size="small" $weight="semibold" color="purple_pure">Ver mais</Text>
+                        <Text $size="small" $weight="semibold" color="purple_pure">{t('lower_section.seemore')}</Text>
                         <Image src={arrow} width={24} height={32} alt="see-more"></Image>
                     </SeeMoreContainer>
                 </FooterContainer>

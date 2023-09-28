@@ -1,0 +1,34 @@
+{
+  "navbar": {
+    "solutions": "Soluciones",
+    "price": "Precios",
+    "academy": "Academy",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "login": "Acceso",
+    "begin_now": "Empezar ahora"
+  },
+
+  "solpopup": {
+    "title": "Soluciones principales",
+    "create": "Crear una escuela en línea",
+    "social": "Comunicación y red social",
+    "gamefication": "Gamificación",
+    "mobile": "Aplicación movil"
+  },
+
+  "upper_section": {
+    "yourschool": "Tu escuela online potente y rentable",
+    "presentation": "Ten tu propia escuela online 100% marca blanca con red social, gamificación, club de suscripción, ecommerce y completo sistema de educación a distancia.",
+    "begin_now": "Empezar ahora",
+    "see_video": "Ver video"
+  },
+
+  "lower_section": {
+    "details": "Pensamos en cada detalle",
+    "resources": "Descubra algunos de nuestros recursos⚡️",
+    "ideal": "Queremos que el alumno se sienta cómodo mientras aprende.",
+    "rocket": "Vea todos los demás recursos disponibles para ayudarle",
+    "seemore": "Ver más"
+  }
+}

@@ -5,7 +5,7 @@ import { theme } from '@/app/styles/index'
 import { Inter } from 'next/font/google'
 import { GlobalStyles } from '@/app/styles/GlobalStyles'
 import Head from 'next/head'
-
+import { appWithTranslation } from 'next-i18next'
 
 const inter = Inter({
   subsets: ['latin-ext'],
@@ -13,7 +13,8 @@ const inter = Inter({
   style: 'normal',
 })
 
-export default function App({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
+
   return (
     <ThemeProvider theme={theme}>
       <Head>
@@ -31,3 +32,6 @@ export default function App({ Component, pageProps }: AppProps) {
     </ThemeProvider>
   )
 }
+
+
+export default appWithTranslation(App)

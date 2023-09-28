@@ -87,7 +87,7 @@ const SeeMoreContainer = styled.div`
 
 // div that contains decoration line and "Pensamos em cada detalhe" text.
 const DetailsContainer = styled.div`
-    width: 359.28px;
+    width: 365.28px;
     height: auto;
     display: flex;
     justify-content: space-between;

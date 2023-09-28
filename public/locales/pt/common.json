@@ -1,0 +1,34 @@
+{
+  "navbar": {
+    "solutions": "Soluções",
+    "price": "Preços",
+    "academy": "Academy",
+    "blog": "Blog",
+    "contact": "Contato",
+    "login": "Entrar",
+    "begin_now": "Começar agora"
+  },
+
+  "solpopup": {
+    "title": "Soluções Principais",
+    "create": "Crie uma Escola Online",
+    "social": "Comunicação e rede social",
+    "gamefication": "Gamificação",
+    "mobile": "Aplicativo mobile"
+  },
+
+  "upper_section": {
+    "yourschool": "Sua escola online poderosa e lucrativa",
+    "presentation": "Tenha sua própria escola online 100% white label com rede social, gamificação, clube de assinaturas, ecommerce e sistema EAD completo.",
+    "begin_now": "Começar agora",
+    "see_video": "Ver vídeo"
+  },
+
+  "lower_section": {
+    "details": "Pensamos em cada detalhe",
+    "resources": "Conheça alguns dos nossos recursos⚡️",
+    "ideal": "Queremos que o aluno se sinta confortável enquanto aprende",
+    "rocket": "Veja todos os outros recursos disponíveis para te ajudar",
+    "seemore": "Ver mais"
+  }
+}

@@ -8,30 +8,32 @@ import usa from "../../../../../public/assets/icons/usa.svg";
 import spain from "../../../../../public/assets/icons/spain.svg";
 import { LangItem, LangPopUpContainer, LanguageContainer, MiniLangContainer, SelectedContainer, SelectedContent, ToggleButton } from "./styles";
 import { LanguageMenuProps } from "@/app/types/elements/LanguageMenu";
-
+import { useRouter } from "next/router";
 
 export default function LanguageMenu({ textColor = "white" }: LanguageMenuProps): JSX.Element {
     const [languageMenu, setLanguageMenu] = useState(false);
-    const [currentLanguage, setCurrentLanguage] = useState("PT");
+    const { locale, push } = useRouter();
 
     const languages = [
-        { code: "PT", icon: brazil, name: "Portuguese" },
-        { code: "EN", icon: usa, name: "English" },
-        { code: "ES", icon: spain, name: "Spanish" },
+        { code: "pt", icon: brazil },
+        { code: "en", icon: usa },
+        { code: "es", icon: spain },
     ];
 
     function handleLanguageMenu() {
         setLanguageMenu(!languageMenu);
     }
 
-    function handleLanguageSelect(languageSelected: string) {
-        setCurrentLanguage(languageSelected);
+    // function that happens when user selects a language in the lang pop-up menu 
+    function handleLanguageSelect(languageCode: string) {
+        // to change locale, that changes page language, using "push" that is provided by useRouter
+        push('/', undefined, { locale: languageCode });
         setLanguageMenu(false);
     }
 
     return (
         <LanguageContainer>
-            <Text $size="x_small" $weight="medium" color={textColor}> {currentLanguage} </Text>
+            <Text $size="x_small" $weight="medium" color={textColor} $case="upper">{locale}</Text>
             <ToggleButton onClick={handleLanguageMenu}>
                 <Image src={polygon} width={10} height={8} alt="toggle" />
             </ToggleButton>
@@ -45,27 +47,19 @@ export default function LanguageMenu({ textColor = "white" }: LanguageMenuProps)
                                 onClick={() => handleLanguageSelect(language.code)}
                             >
                                 <MiniLangContainer>
-                                    <Image src={language.icon} height={16} width={16} alt={language.name} />
-                                    <Text $size="x_small" $weight="medium" color="gray">
+                                    <Image src={language.icon} height={16} width={16} alt={language.code} />
+                                    <Text $size="x_small" $weight="medium" color="gray" $case="upper">
                                         {language.code}
                                     </Text>
                                 </MiniLangContainer>
-                                {currentLanguage === language.code && (
-                                    <>
-                                        <SelectedContent>
-                                        </SelectedContent>
+                                {locale === language.code && (
+                                    <SelectedContent>
                                         <Image src={checked} height={20} width={20} alt="checked" />
-                                    </>
+                                    </SelectedContent>
                                 )}
                             </LangItem>
                         ))}
-                        {/* <SelectedContent>
-                            <Image src={brazil} height={16} width={16} alt="brazil" />
-                            <Text $size="x_small" $weight="medium" color="gray">PT</Text>
-                            <Image src={checked} height={20} width={20} alt="checked" />
-                        </SelectedContent> */}
                     </SelectedContainer>
-
                 </LangPopUpContainer>
             )}
         </LanguageContainer>

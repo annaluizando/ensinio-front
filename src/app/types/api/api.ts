@@ -2,7 +2,7 @@ import { ResourceData } from "../elements/ResourcesCard";
 
 export const getCard = async (): Promise<ResourceData[]> => {
   try {
-    const response = await fetch("http://localhost:3001/rcards", {
+    const response = await fetch("http://localhost:3001/items", {
       method: 'GET',
     });
 

@@ -1,0 +1,34 @@
+{
+  "navbar": {
+    "solutions": "Solutions",
+    "price": "Prices",
+    "academy": "Academy",
+    "blog": "Blog",
+    "contact": "Contacts",
+    "login": "Login",
+    "begin_now": "Begin now"
+  },
+
+  "solpopup": {
+    "title": "Main Solutions",
+    "create": "Create an Online School",
+    "social": "Communication and social network",
+    "gamefication": "Gamification",
+    "mobile": "Mobile app"
+  },
+
+  "upper_section": {
+    "yourschool": "Your powerful and profitable online school",
+    "presentation": "Have your own 100% white label online school with social network, gamification, subscription club, ecommerce and complete distance learning system.",
+    "begin_now": "Begin now",
+    "see_video": "See video"
+  },
+
+  "lower_section": {
+    "details": "We think about every detail",
+    "resources": "Discover some of our resources⚡️",
+    "ideal": "We want the student to feel comfortable while learning",
+    "rocket": "See all the other resources available to help you",
+    "seemore": "See More"
+  }
+}

@@ -9,9 +9,11 @@ import line_blue from "../../../../public/assets/shapes/line_blue.svg";
 import LanguageMenu from "../Elements/LanguageMenu";
 import menuIcon from "../../../../public/assets/icons/menu_icon.svg";
 import MenuOpen from "./MenuOpen";
+import { useTranslation } from "next-i18next";
 
 export default function NavBar() {
     const [menu, setMenu] = useState(false);
+    const { t } = useTranslation('common')
 
     function handleMenu() {
         setMenu(!menu);
@@ -27,10 +29,10 @@ export default function NavBar() {
 
                     <PagesContainer>
                         <SolutionsToggle />
-                        <a href=""><Text color="white" $size="small" $weight="medium">Preços</Text></a>
-                        <a href=""><Text color="white" $size="small" $weight="medium">Academy</Text></a>
-                        <a href=""><Text color="white" $size="small" $weight="medium">Blog</Text></a>
-                        <a href=""><Text color="white" $size="small" $weight="medium">Contato</Text></a>
+                        <a href=""><Text color="white" $size="small" $weight="medium">{t('navbar.price')}</Text></a>
+                        <a href=""><Text color="white" $size="small" $weight="medium">{t('navbar.academy')}</Text></a>
+                        <a href=""><Text color="white" $size="small" $weight="medium">{t('navbar.blog')}</Text></a>
+                        <a href=""><Text color="white" $size="small" $weight="medium">{t('navbar.contact')}</Text></a>
                     </PagesContainer>
 
                     <Image src={line_blue} width={1} height={24} alt="line" />
@@ -38,7 +40,7 @@ export default function NavBar() {
                     <Login />
 
 
-                    <EmptyBtn>Começar agora</EmptyBtn>
+                    <EmptyBtn>{t('navbar.begin_now')}</EmptyBtn>
 
                     <LanguageMenu />
                 </MenuContainer>
@@ -51,5 +53,6 @@ export default function NavBar() {
                 </>
             )}
         </NavBarContainer>
+
     )
 }

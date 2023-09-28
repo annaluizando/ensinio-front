@@ -1,38 +1,89 @@
-## Getting Started
+# ⚡Ensinio FrontEnd
 
-First, run the development server:
+Teste assíncrono da empresa Ensínio referente à área de Front-End.
+
+O projeto consistiu no desenvolvimento de uma "seção hero" de uma página institucional, dividida em navbar, seção superior e seção inferior.
+
+- Design da interface: https://www.figma.com/file/M0jy5rqNumytQKuKZYhgPS/Ensinio-Frontend-Challenge
+
+- Repositório do teste: https://github.com/EnsinioOrg/front-end-async-test
+
+## 🦆 Tecnologias
+
+De acordo com os requisitos do teste, foram utilizadas as seguintes tecnologias:
+
+![Tecnologias](https://skillicons.dev/icons?i=html,css,next,styledcomponents,ts)
+
+- HTML & CSS
+- Next.js
+- Styled-Components
+- Typescript
+
+## 🏃Instalação e Execução
+
+Abaixo estão instruções de como rodar o projeto localmente.
+
+1. Clone esse repositório
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  git clone https://github.com/annaluizando/ensinio-front.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Entre na pasta do projeto
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+  cd ensinio-front
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+3. Instale as packages necessárias
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+  npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+4. Inicialize o json-server
 
-## Learn More
+```bash
+   json-server --watch db.json --port 3001
+```
 
-To learn more about Next.js, take a look at the following resources:
+5. Inicialize o servidor numa porta local
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+   npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 💻 Deploy
 
-## Deploy on Vercel
+Esse projeto está hospedado na plataforma Vercel, você pode dar uma olhada nele por meio do seguinte link:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+https://ensinio-front.vercel.app/
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 🚀 Roadmap / Jornada
+
+- Desenvolvimento da tela
+
+- Adição dos Pop-Up's
+
+- Ajustes na responsividade
+
+- Adição da funcionalidade de internacionalização
+
+- Configuração dos cookies
+
+- Adição de comentários necessários no código
+
+## ⚗️ Apêndice
+
+É importante ressaltar que existem alguns arquivos JSON, entre eles:
+
+- **db.json**: que foi disponibilizado no repositório do teste técnico da empresa, no qual engloba as traduções dos 3 cards (Trilhas, Playlists e Coleções) da Lower Section (parte inferior do site).
+- **common.json**: no diretório do projeto existe uma pasta chamada locales, e dentro dela existem 3 pastas (en, es, pt), cada uma referente à sua respectiva linguagem, e dentro de cada uma existe 1 arquivo common.json, que engloba as traduções (e conteúdos de texto) de todo o resto do site.
+
+## 🗂️ Autores
+
+- [@annaluizando](github.com/annaluizando)
+
+- [@ensiniodevfront](front@ensinio.com)
+
+- [@silviow](silvio.mms2016@gmail.com)
