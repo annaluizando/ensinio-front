@@ -1,4 +1,4 @@
-export interface LanguageMenuProps {
+type LanguageMenuProps = {
     textColor?: string;
     textWeight?: string;
 }

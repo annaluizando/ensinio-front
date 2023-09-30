@@ -7,7 +7,6 @@ import brazil from "../../../../../public/assets/icons/brazil.svg";
 import usa from "../../../../../public/assets/icons/usa.svg";
 import spain from "../../../../../public/assets/icons/spain.svg";
 import { LangItem, LangPopUpContainer, LanguageContainer, MiniLangContainer, SelectedContainer, SelectedContent, ToggleButton } from "./styles";
-import { LanguageMenuProps } from "@/app/types/elements/LanguageMenu";
 import { useRouter } from "next/router";
 
 export default function LanguageMenu({ textColor = "white" }: LanguageMenuProps): JSX.Element {
@@ -19,6 +18,7 @@ export default function LanguageMenu({ textColor = "white" }: LanguageMenuProps)
         { code: "en", icon: usa },
         { code: "es", icon: spain },
     ];
+
 
     function handleLanguageMenu() {
         setLanguageMenu(!languageMenu);
@@ -32,12 +32,14 @@ export default function LanguageMenu({ textColor = "white" }: LanguageMenuProps)
     }
 
     return (
-        <LanguageContainer>
+        <LanguageContainer onMouseEnter={handleLanguageMenu} onMouseLeave={handleLanguageMenu} onClick={handleLanguageMenu}>
+            {/* current language that is being used in site and it's toggle button */}
             <Text $size="x_small" $weight="medium" color={textColor} $case="upper">{locale}</Text>
-            <ToggleButton onClick={handleLanguageMenu}>
+            <ToggleButton>
                 <Image src={polygon} width={10} height={8} alt="toggle" />
             </ToggleButton>
 
+            {/* condition responsable for showing or not the popup itself */}
             {languageMenu && (
                 <LangPopUpContainer>
                     <SelectedContainer>

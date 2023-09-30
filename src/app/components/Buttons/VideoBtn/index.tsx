@@ -5,13 +5,23 @@ import play from "../../../../../public/assets/icons/play.svg";
 import { useTranslation } from "next-i18next";
 
 const VideoBtnContainer = styled.div`
-    width: 114px;
-    height: 32px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 0.5rem;
+    background-color: transparent;
+    border: transparent;
+    border-radius: 35px;
     cursor: pointer;
-    
+
+
+    &:hover {
+        padding: 0.6rem;
+        border: solid 1px ${props => props.theme.colors.white};
+        border-radius: 35px;
+        transition-duration: 0.4s;
+        transition: ease-in-out 0.3s;
+        transform: scale(1.05);
+    }
 `;
 
 

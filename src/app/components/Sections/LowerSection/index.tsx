@@ -60,7 +60,7 @@ export default function LowerSection() {
 
                     <SeeMoreContainer>
                         <Text $size="small" $weight="semibold" color="purple_pure">{t('lower_section.seemore')}</Text>
-                        <Image src={arrow} width={24} height={32} alt="see-more"></Image>
+                        <Image className="bounce" src={arrow} width={24} height={32} alt="see-more"></Image>
                     </SeeMoreContainer>
                 </FooterContainer>
             </LSContentContainer>

@@ -13,19 +13,26 @@ export default function SolutionsToggle() {
 
 
     // will be responsable to show or not show the solutions menu
-    function handleSolutions() {
-        setSolutions(!solutions);
+    // two functions where used to make less the chances of an error ocorring
+    function handleSolutionsOn() {
+        setSolutions(true);
     }
+    function handleSolutionsOff() {
+        setSolutions(false);
+    }
+
 
     return (
         <>
-            <SolutionsContainer onClick={handleSolutions}>
+            {/* "solution" text that appears on navbar and it's toggle icon */}
+            <SolutionsContainer onMouseEnter={handleSolutionsOn} onMouseLeave={handleSolutionsOff}>
                 <a><Text color="white" $size="small" $weight="medium">{t('navbar.solutions')}</Text></a>
-                <ToggleButton onClick={handleSolutions}>
+                <ToggleButton>
                     <Image src={polygon} width={10} height={8} alt="toggle" />
                 </ToggleButton>
             </SolutionsContainer>
 
+            {/* conditional that renders or not the popup itself */}
             {solutions && (
                 <SolutionsPopUpContainer>
                     <SPopUpContent>

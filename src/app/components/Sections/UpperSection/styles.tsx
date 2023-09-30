@@ -5,8 +5,8 @@ const SectionContainer = styled.div`
     height: 700px;
     background-image: ${props => props.theme.colors.gradient};
 
-    @media (max-width: 330px) {
-        height: 56.75rem;
+    @media (max-width: 412px) {
+        height: 70rem;
     }
 `;
 
@@ -19,27 +19,25 @@ const IntroContainer = styled.div`
     align-content: space-evenly;
     margin: 0;
     position: relative;
-    @media (max-width: 1135px) {
+    @media (max-width: 400px) {
+        height: 80%;
+        width: 95%;
     }
 `;
 
 const DevicesContainer = styled.div`
-    width: 16rem;
-    height: 24px;
     display: flex;
-    justify-content: space-between;
-    @media (max-width: 345px){
-        width: 100%;
-    }
+    gap: 1rem;
+    margin-top: 6.875rem;
+    align-items: center;
 `;
 
 const ButtonsContainer = styled.div`
-    width: 21.125rem;
+    width: auto;
     height: 56px;
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: space-between;
+    gap: 2.5rem;
     align-items: center;
 
     @media (max-width: 545px){
@@ -49,17 +47,21 @@ const ButtonsContainer = styled.div`
     }
 `;
 
+
+// text div that contains UpperSection's introduction about ensinio.
 const TextContainer = styled.div`
-    width: 27.125rem;
-    height: 13.25rem;
+    width: auto;
+    height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 2.75rem;
+    margin-bottom: 2.75rem;
+    margin-top: 2.75rem;
 
-    @media (max-width: 470px) {
+    /* @media (max-width: 470px) {
         width: 95%;
         height: 70%;
-    }
+    } */
 `;
 
 const DesignIconsContainer = styled.div`
@@ -73,25 +75,26 @@ const USContentContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: 38.188rem;
-    height: 23.75rem;
+    height: auto;
     padding-left: 7rem;
-    justify-content: space-between;
+    padding-right: 4rem;
 
-    @media (min-width: 302px) and (max-width: 525px) {
+    @media (min-width: 412px) and (max-width: 525px) {
         padding-left: 1.5rem;
-        height: 32rem;
+        padding-right: 0;
         width: 100%;
     }
 
     @media (min-width: 525px) and (max-width: 611px) {
         padding-left: 3rem;
-        height: 31rem;
+        padding-right: 0;
         width: 100%;
     }
 
-    @media (max-width: 302px) {
+    @media (max-width: 412px) {
+        gap: 3rem;
+        padding-right: 0;
         padding-left: 0.8rem;
-        height: 40rem;
         width: 100%;
     }
 

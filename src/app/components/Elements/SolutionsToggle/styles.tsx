@@ -1,21 +1,33 @@
 import styled, { keyframes } from "styled-components";
 
 
+
+const ToggleButton = styled.button`
+  border: none;
+  padding-left: 0.75rem;
+  background-color: transparent;
+  cursor: pointer;
+  &:hover {
+      transform: rotateX(180deg);
+      transition: ease-in-out 0.3s;
+  }
+`;
+
 // div of solutions button (text + icon) 
-const SolutionsContainer = styled.div`
-    width: 88px;
+const SolutionsContainer = styled.button`
+    width: auto;
     height: 16px;
     display: flex;
     justify-content: space-between;
     cursor: pointer;
-`;
-
-const ToggleButton = styled.button`
-    width: 10px;
-    height: 8px;
-    border: none;
     background-color: transparent;
-    cursor: pointer;
+    border: none;
+    &:hover {
+      ${ToggleButton} {
+      transform: rotateX(180deg);
+      transition: ease-in-out 0.3s;
+      }
+    }
 `;
 
 // animation to be used in SolutionsPopUp
@@ -41,7 +53,7 @@ const SolutionsPopUpContainer = styled.div`
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 4rem;
+    top: 3.5rem;
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
     animation-name: ${fadeInAnimation};
@@ -60,6 +72,7 @@ const CardsContainer = styled.div`
     align-content: space-between;
 `;
 
+// "solutions" text container
 const STitleContainer = styled.div`
     width: 547px;
     height: auto;
@@ -69,17 +82,17 @@ const STitleContainer = styled.div`
 
 // div that contains all content inside the solutions popup
 const SPopUpContent = styled.div`
-    height: 175px;
+    height: auto;
     width: 547px;
     display: flex;
     flex-direction: column;
 `;
 
 export {
-    SPopUpContent,
-    STitleContainer,
-    CardsContainer,
-    SolutionsPopUpContainer,
-    SolutionsContainer,
-    ToggleButton,
+  SPopUpContent,
+  STitleContainer,
+  CardsContainer,
+  SolutionsPopUpContainer,
+  SolutionsContainer,
+  ToggleButton,
 }

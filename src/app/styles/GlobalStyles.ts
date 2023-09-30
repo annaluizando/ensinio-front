@@ -41,6 +41,7 @@ const GlobalStyles = createGlobalStyle`
     pointer-events: none;
   }
 
+  // classes that are responsables for decoration icons (that are in the top of UpperSection) spacing 
   .icon-play{
     margin-top: 1.688rem;
     margin-left: 1.875rem;
@@ -50,6 +51,43 @@ const GlobalStyles = createGlobalStyle`
     margin-top: 3.813rem;
   }
 
+
+  // keyframe that is responsable for "see more" arrow animation
+  @keyframes bounce {
+      0% {
+        transform: translateX(0);
+      }
+      5.55556% {
+        transform: translateX(0);
+      }
+      11.11111% {
+        transform: translateX(0);
+      }
+      22.22222% {
+        transform: translateX(-15px);
+      }
+      27.77778% {
+        transform: translateX(0);
+      }
+      33.33333% {
+        transform: translateX(-15px);
+      }
+      44.44444% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+  .bounce{
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    animation: bounce 3s ease infinite;
+    transform-origin: 50% 50%;
+  }
+
+  // to personalize navegator scrollbar
   ::-webkit-scrollbar {
       width: 3px;
       height: 3px;
@@ -65,6 +103,7 @@ const GlobalStyles = createGlobalStyle`
   }
 `
 
+// general container, inside of it theres all the others containers
 const MainContainer = styled.main`
   width: 100vw;
   height: 100vh;

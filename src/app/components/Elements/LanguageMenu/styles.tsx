@@ -1,14 +1,6 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 
-const LanguageContainer = styled.div`
-    width: 38px;
-    height: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: center;
-`;
 
 const ToggleButton = styled.button`
     width: 10px;
@@ -16,6 +8,35 @@ const ToggleButton = styled.button`
     border: none;
     background-color: transparent;
     cursor: pointer;
+`;
+
+const LanguageContainer = styled.button`
+        width: 38px;
+        height: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: center;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        &:hover {
+          ${ToggleButton} {
+            height: auto;
+          transform: rotateX(180deg);
+          transition: ease-in-out 0.3s;
+          }
+        }
+    `;
+
+
+const fadeInAnimation = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 `;
 
 const LangPopUpContainer = styled.div`
@@ -26,13 +47,16 @@ const LangPopUpContainer = styled.div`
     background-color: ${props => props.theme.colors.white};
     border-radius: 8px;
     position: absolute;
-    top: 4rem;
-    right: 3rem;
+    top: 3.5rem;
+    right: 2rem;
     @media (max-width: 1250px) {
       top: 20rem;
       right: 0;
       width: 150px;
     }
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    animation-name: ${fadeInAnimation};
 `;
 
 const SelectedContainer = styled.div`
@@ -48,7 +72,7 @@ const SelectedContainer = styled.div`
 `;
 
 const SelectedContent = styled.div`
-    width: 138px;
+    width: 100%;
     height: 48px;
     display: flex;
     align-items: center;
@@ -86,11 +110,11 @@ const MiniLangContainer = styled.div`
 `;
 
 export {
-    MiniLangContainer,
-    LangItem,
-    SelectedContent,
-    SelectedContainer,
-    LangPopUpContainer,
-    ToggleButton,
-    LanguageContainer,
+  MiniLangContainer,
+  LangItem,
+  SelectedContent,
+  SelectedContainer,
+  LangPopUpContainer,
+  ToggleButton,
+  LanguageContainer,
 }
