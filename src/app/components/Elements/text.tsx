@@ -1,14 +1,5 @@
-import { ColorTheme, FontFamily, FontSize, FontWeight, TextCase, TextSpacing } from "@/app/styles";
+import { TextProps } from "@/app/types/elements/TextProps";
 import styled from "styled-components";
-
-interface TextProps {
-  $size?: FontSize;
-  color?: ColorTheme | string;
-  $weight?: FontWeight | string;
-  $family?: FontFamily;
-  $case?: TextCase;
-  $spacing?: TextSpacing;
-}
 
 export const Text = styled.p<TextProps>`
   ${({ theme, $size, color, $weight, $family, $case, $spacing }) => `

@@ -1,13 +1,13 @@
 import Image from "next/image";
 import { MenuBtn, MenuContainer, NavBarContainer, NavBarContentContainer, PagesContainer } from "./styles";
-import { Text } from "../Elements/text";
-import { EmptyBtn } from "../Buttons/EmptyBtn";
+import { Text } from "@/components/Elements/text";
+import { EmptyBtn } from "@/components/Buttons/EmptyBtn";
 import { useState } from "react";
-import Login from "../Buttons/Login";
+import Login from "@/components/Buttons/Login";
 import SolutionsToggle from "../Elements/SolutionsToggle";
-import line_blue from "../../../../public/assets/shapes/line_blue.svg";
-import LanguageMenu from "../Elements/LanguageMenu";
-import menuIcon from "../../../../public/assets/icons/menu_icon.svg";
+import line_blue from "@/public/assets/shapes/line_blue.svg";
+import LanguageMenu from "@/components/Elements/LanguageMenu";
+import menuIcon from "@/public/assets/icons/menu_icon.svg";
 import MenuOpen from "./MenuOpen";
 import { useTranslation } from "next-i18next";
 

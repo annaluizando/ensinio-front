@@ -1,33 +1,30 @@
 import styled, { keyframes } from "styled-components";
 
+interface ToggleButtonProps {
+  rotate?: boolean;
+}
 
 
-const ToggleButton = styled.button`
-    width: 10px;
-    height: 8px;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
+const ToggleButton = styled.button<ToggleButtonProps>`
+  width: 10px;
+  height: ${props => (props.rotate ? 'auto' : '8px')};
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transform: ${props => (props.rotate ? 'rotate(180deg)' : 'none')};
 `;
 
 const LanguageContainer = styled.div`
-        width: 38px;
-        height: 40px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-content: center;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        &:hover {
-          ${ToggleButton} {
-            height: auto;
-          transform: rotateX(180deg);
-          transition: ease-in-out 0.3s;
-          }
-        }
-    `;
+  width: 38px;
+  height: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+`;
 
 
 const fadeInAnimation = keyframes`
@@ -98,6 +95,7 @@ const LangItem = styled.div`
   
   &:hover {
     background: linear-gradient(90deg, #5F41D9 -880.48%, rgba(95, 65, 217, 0.00) 100%);
+    border-radius: 0;
   }
 `;
 

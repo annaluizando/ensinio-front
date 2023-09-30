@@ -1,10 +1,10 @@
-import ResourcesCard from "@/app/components/ResourcesCard";
+import ResourcesCard from "@/components/ResourcesCard";
 import { DetailsContainer, DetailsnResourcesContainer, FooterContainer, LSContentContainer, LongLine, LowerSectionContainer, ResourcesGroupContainer, RocketContainer, SeeMoreContainer, UpperContainer } from "./styles";
-import { Text } from "@/app/components/Elements/text";
+import { Text } from "@/components/Elements/text";
 import Image from "next/image";
-import rocket from "../../../../../public/assets/icons/rocket.svg";
-import arrow from "../../../../../public/assets/shapes/arrow.svg";
-import line_purple from "../../../../../public/assets/shapes/line_purple.svg";
+import rocket from "@/public/assets/icons/rocket.svg";
+import arrow from "@/public/assets/shapes/arrow.svg";
+import line_purple from "@/public/assets/shapes/line_purple.svg";
 import { useEffect, useState } from 'react';
 import { getCard } from "@/app/types/api/api";
 import { ResourceData } from "@/app/types/elements/ResourcesCard";

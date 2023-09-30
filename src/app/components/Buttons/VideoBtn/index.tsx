@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styled from "styled-components";
-import { Text } from "../../Elements/text";
-import play from "../../../../../public/assets/icons/play.svg";
+import { Text } from "@/components/Elements/text";
+import play from "@/public/assets/icons/play.svg";
 import { useTranslation } from "next-i18next";
 
 const VideoBtnContainer = styled.div`

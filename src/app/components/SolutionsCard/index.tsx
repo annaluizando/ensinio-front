@@ -1,11 +1,6 @@
+import { SolutionsCardProps } from "@/app/types/elements/SolutionsCardProps";
 import { Text } from "../Elements/text";
 import { STextContainer, SolutionsCardContainer, SolutionsIcon } from "./styles";
-
-interface SolutionsCardProps {
-    title: string;
-    description: string;
-    $url: string;
-}
 
 export default function SolutionsCard({ title, description, $url }: SolutionsCardProps) {
     return (

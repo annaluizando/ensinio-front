@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { ButtonsContainer, DesignIconsContainer, DevicesContainer, IntroContainer, SectionContainer, TextContainer, USContentContainer } from "./styles";
-import devices from "../../../../../public/assets/icons/devices.svg";
-import { Text } from "@/app/components/Elements/text";
-import { FullBtn } from "@/app/components/Buttons/FullBtn";
-import VideoBtn from "@/app/components/Buttons/VideoBtn";
-import IntroImage from "@/app/components/Elements/IntroImage";
-import wplaylist_icon from "../../../../../public/assets/icons/icon-playlistsw.svg";
-import certified_icon from "../../../../../public/assets/icons/icon-certified.svg";
+import devices from "@/public/assets/icons/devices.svg";
+import { Text } from "@/components/Elements/text";
+import { FullBtn } from "@/components/Buttons/FullBtn";
+import VideoBtn from "@/components/Buttons/VideoBtn";
+import IntroImage from "@/components/Elements/IntroImage";
+import wplaylist_icon from "@/public/assets/icons/icon-playlistsw.svg";
+import certified_icon from "@/public/assets/icons/icon-certified.svg";
 import { useTranslation } from "next-i18next";
 
 

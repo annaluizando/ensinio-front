@@ -1,14 +1,12 @@
-import NavBar from '@/app/components/NavBar'
-import LowerSection from '../app/components/Sections/LowerSection'
+import NavBar from '@/components/NavBar'
+import LowerSection from '@/components/Sections/LowerSection'
 import { MainContainer } from '@/app/styles/GlobalStyles'
-import UpperSection from '@/app/components/Sections/UpperSection'
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+import UpperSection from '@/components/Sections/UpperSection'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 
 type Props = {
-  // Add custom props here
+
 }
 
 export default function Home(_props: InferGetStaticPropsType<typeof getStaticProps>) {

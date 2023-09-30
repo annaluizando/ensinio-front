@@ -1,8 +1,14 @@
-import styled from "styled-components";
+import { IconProps } from "@/app/types/elements/IconProps";
+import styled, { keyframes } from "styled-components";
 
-interface ResourcesIconProps {
-    $url: string;
-}
+const fadeInAnimation = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 const ResourcesContainer = styled.div`
     height: 173px;
@@ -10,12 +16,23 @@ const ResourcesContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  @media (max-width: 370px) {
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-name: ${fadeInAnimation};
+  
+    @media (max-width: 370px) {
         width: 100%;
+    }
+
+    
+    &:hover,
+    &:focus {
+        box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+        transform: translateY(-0.25em);
     }
 `;
 
-const ResourcesIcon = styled.div<ResourcesIconProps>`
+const ResourcesIcon = styled.div<IconProps>`
     width: 40px;
     height: 40px;
     background-image: url(${props => props.$url});

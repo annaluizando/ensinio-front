@@ -1,11 +1,11 @@
 import Image from "next/image";
-import { Text } from "../text";
+import { Text } from "@/components/Elements/text";
 import { useState } from "react";
-import polygon from "../../../../../public/assets/shapes/polygon.svg";
-import checked from "../../../../../public/assets/shapes/checkmark-square.svg";
-import brazil from "../../../../../public/assets/icons/brazil.svg";
-import usa from "../../../../../public/assets/icons/usa.svg";
-import spain from "../../../../../public/assets/icons/spain.svg";
+import polygon from "@/public/assets/shapes/polygon.svg";
+import checked from "@/public/assets/shapes/checkmark-square.svg";
+import brazil from "@/public/assets/icons/brazil.svg";
+import usa from "@/public/assets/icons/usa.svg";
+import spain from "@/public/assets/icons/spain.svg";
 import { LangItem, LangPopUpContainer, LanguageContainer, MiniLangContainer, SelectedContainer, SelectedContent, ToggleButton } from "./styles";
 import { useRouter } from "next/router";
 
@@ -53,9 +53,15 @@ export default function LanguageMenu({ textColor = "white" }: LanguageMenuProps)
     return (
         <LanguageContainer onClick={handlePopUp}>
             <Text $size="x_small" $weight="medium" color={textColor} $case="upper">{locale}</Text>
-            <ToggleButton>
-                <Image src={polygon} width={10} height={8} alt="toggle" />
-            </ToggleButton>
+            {popup ? (
+                <ToggleButton rotate>
+                    <Image src={polygon} width={10} height={8} alt="toggle" />
+                </ToggleButton>
+            ) : (
+                <ToggleButton>
+                    <Image src={polygon} width={10} height={8} alt="toggle" />
+                </ToggleButton>
+            )}
 
             {popup && (
                 <LangPopUpContainer>

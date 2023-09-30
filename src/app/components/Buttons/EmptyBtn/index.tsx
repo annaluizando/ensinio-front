@@ -1,12 +1,5 @@
-import { ColorTheme, FontSize, FontWeight } from "@/app/styles";
+import { ButtonProps } from "@/app/types/elements/ButtonProps";
 import styled from "styled-components";
-
-interface ButtonProps {
-    color?: ColorTheme;
-    weight?: FontWeight;
-    size?: FontSize;
-    backgroundColor?: ColorTheme;
-}
 
 export const EmptyBtn = styled.button<ButtonProps>`
     height: 40px;

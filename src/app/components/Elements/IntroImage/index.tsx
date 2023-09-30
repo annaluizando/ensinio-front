@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import introImage from "../../../../../public/stockphoto.svg";
-import introShape from "../../../../../public/assets/shapes/elipse.svg";
+import introImage from "@/public/stockphoto.svg";
+import introShape from "@/public/assets/shapes/elipse.svg";
 import Image from "next/image";
 
 const IntroContainer = styled.div`

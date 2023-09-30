@@ -1,13 +1,9 @@
-import { ResourceData } from "@/app/types/elements/ResourcesCard";
+import { ResourcesCardProps } from "@/app/types/elements/ResourceCardsProps";
 import { Text } from "../Elements/text";
 import { RTextContainer, ResourcesContainer, ResourcesIcon } from "./styles";
-import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 
-interface ResourcesCardProps {
-    data: ResourceData;
-    $url: string;
-}
+
 
 export default function ResourcesCard({ data, $url }: ResourcesCardProps) {
     const { title, description } = data;

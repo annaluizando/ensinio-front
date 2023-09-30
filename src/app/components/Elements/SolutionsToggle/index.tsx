@@ -1,8 +1,8 @@
 import { Text } from "../text";
 import { useState } from "react";
-import polygon from "../../../../../public/assets/shapes/polygon.svg";
+import polygon from "@/public/assets/shapes/polygon.svg";
 import Image from "next/image";
-import SolutionsCard from "../../SolutionsCard";
+import SolutionsCard from "@/components/SolutionsCard";
 import { CardsContainer, SPopUpContent, STitleContainer, SolutionsContainer, SolutionsPopUpContainer, ToggleButton } from "./styles";
 import { useTranslation } from "next-i18next";
 
@@ -32,7 +32,7 @@ export default function SolutionsToggle() {
             </SolutionsContainer>
 
             {solutions && (
-                <SolutionsPopUpContainer>
+                <SolutionsPopUpContainer onMouseLeave={handleSolutionsOff}>
                     <SPopUpContent>
                         <STitleContainer>
                             <Text $spacing="wide" $size="xx_small" $weight="semibold" $case="upper" color="purple_pure">{t('solpopup.title')}</Text>
