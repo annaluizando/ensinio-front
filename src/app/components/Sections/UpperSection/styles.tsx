@@ -94,7 +94,16 @@ const USContentContainer = styled.div`
         width: 100%;
     }
 
-    @media (max-width: 414px) {
+    @media (min-width: 322px) and (max-width: 414px) {
+        gap: 3rem;
+        padding-right: 0;
+        padding-left: 0.8rem;
+        padding-top: 15rem;
+        width: 100%;
+        padding-bottom: 7.625rem;
+    }
+
+    @media (max-width: 322px) {
         gap: 3rem;
         padding-right: 0;
         padding-left: 0.8rem;
@@ -102,7 +111,6 @@ const USContentContainer = styled.div`
         width: 100%;
         padding-bottom: 7.625rem;
     }
-
 
 `;
 
