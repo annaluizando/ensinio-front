@@ -14,7 +14,7 @@ const ToggleButton = styled.button`
 `;
 
 // div of solutions button (text + icon) 
-const SolutionsContainer = styled.button`
+const SolutionsContainer = styled.div`
     width: auto;
     height: 16px;
     display: flex;

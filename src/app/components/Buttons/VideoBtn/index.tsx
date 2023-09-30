@@ -16,7 +16,7 @@ const VideoBtnContainer = styled.div`
 
     &:hover {
         padding: 0.6rem;
-        border: solid 1px ${props => props.theme.colors.white};
+        border: solid 1px ${props => props.theme.colors.light_gray};
         border-radius: 35px;
         transition-duration: 0.4s;
         transition: ease-in-out 0.3s;

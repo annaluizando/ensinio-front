@@ -10,7 +10,7 @@ const ToggleButton = styled.button`
     cursor: pointer;
 `;
 
-const LanguageContainer = styled.button`
+const LanguageContainer = styled.div`
         width: 38px;
         height: 40px;
         display: flex;

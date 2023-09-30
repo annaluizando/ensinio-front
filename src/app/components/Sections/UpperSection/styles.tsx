@@ -5,8 +5,8 @@ const SectionContainer = styled.div`
     height: 700px;
     background-image: ${props => props.theme.colors.gradient};
 
-    @media (max-width: 412px) {
-        height: 70rem;
+    @media (max-width: 415px) {
+        height: 60rem;
     }
 `;
 
@@ -28,13 +28,15 @@ const IntroContainer = styled.div`
 const DevicesContainer = styled.div`
     display: flex;
     gap: 1rem;
-    margin-top: 6.875rem;
     align-items: center;
+
+    @media (max-width: 305px){
+        padding-top: 6.813rem;
+    }
 `;
 
 const ButtonsContainer = styled.div`
     width: auto;
-    height: 56px;
     display: flex;
     flex-wrap: wrap;
     gap: 2.5rem;
@@ -55,7 +57,7 @@ const TextContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 2.75rem;
-    margin-bottom: 2.75rem;
+    margin-bottom: 3rem;
     margin-top: 2.75rem;
 
     /* @media (max-width: 470px) {
@@ -78,8 +80,9 @@ const USContentContainer = styled.div`
     height: auto;
     padding-left: 7rem;
     padding-right: 4rem;
+    padding-top: 6.813rem;
 
-    @media (min-width: 412px) and (max-width: 525px) {
+    @media (min-width: 414px) and (max-width: 525px) {
         padding-left: 1.5rem;
         padding-right: 0;
         width: 100%;
@@ -91,11 +94,13 @@ const USContentContainer = styled.div`
         width: 100%;
     }
 
-    @media (max-width: 412px) {
+    @media (max-width: 414px) {
         gap: 3rem;
         padding-right: 0;
         padding-left: 0.8rem;
+        padding-top: 20rem;
         width: 100%;
+        padding-bottom: 7.625rem;
     }
 
 

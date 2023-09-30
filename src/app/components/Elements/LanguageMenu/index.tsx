@@ -10,7 +10,10 @@ import { LangItem, LangPopUpContainer, LanguageContainer, MiniLangContainer, Sel
 import { useRouter } from "next/router";
 
 export default function LanguageMenu({ textColor = "white" }: LanguageMenuProps): JSX.Element {
-    const [languageMenu, setLanguageMenu] = useState(false);
+    // const [hover, setHover] = useState(false);
+    // const [click, setClick] = useState(false);
+
+    const [popup, setPopUp] = useState(false);
     const { locale, push } = useRouter();
 
     const languages = [
@@ -20,25 +23,41 @@ export default function LanguageMenu({ textColor = "white" }: LanguageMenuProps)
     ];
 
 
-    function handleLanguageMenu() {
-        setLanguageMenu(!languageMenu);
+    // to keep the language user selected, so next time they access the site it will display in their last selected language.
+    const setCookie = (locale: string) => {
+        document.cookie = `NEXT_LOCALE=${locale}; max-age=31536000; path=/`
+    }
+
+    // function handleLMenuHover() {
+    //     setHover(!hover);
+    // }
+
+    // function handleLMenuClick() {
+    //     setClick(!click)
+    // }
+
+    function handlePopUp() {
+        setPopUp(!popup);
     }
 
     // function that happens when user selects a language in the lang pop-up menu 
     function handleLanguageSelect(languageCode: string) {
         // to change locale, that changes page language, using "push" that is provided by useRouter
         push('/', undefined, { locale: languageCode });
-        setLanguageMenu(false);
+        setPopUp(false);
+        setCookie(languageCode);
+        // setClick(false);
+        // setHover(false)
     }
 
     return (
-        <LanguageContainer onMouseEnter={handleLanguageMenu} onMouseLeave={handleLanguageMenu} onClick={handleLanguageMenu}>
+        <LanguageContainer onClick={handlePopUp}>
             <Text $size="x_small" $weight="medium" color={textColor} $case="upper">{locale}</Text>
             <ToggleButton>
                 <Image src={polygon} width={10} height={8} alt="toggle" />
             </ToggleButton>
 
-            {languageMenu && (
+            {popup && (
                 <LangPopUpContainer>
                     <SelectedContainer>
                         {languages.map(language => (
