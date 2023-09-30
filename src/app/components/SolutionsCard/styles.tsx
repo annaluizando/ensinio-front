@@ -8,7 +8,7 @@ const SolutionsCardContainer = styled.div`
     display : flex;
     width: 235px;
     height: 40px;
-    justify-content: space-between;
+    justify-content: space-around;
 `;
 
 const SolutionsIcon = styled.div<SolutionsIconProps>`

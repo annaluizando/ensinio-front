@@ -59,12 +59,6 @@ const SelectedContent = styled.div`
     right: 0;
 `;
 
-// const LangContainer = styled.div`
-//     width: ;
-//     height: ;
-//     display: flex;
-// `;
-
 
 const LangItem = styled.div`
     width: 100%;

@@ -2,7 +2,7 @@ import { ResourceData } from "../elements/ResourcesCard";
 
 export const getCard = async (): Promise<ResourceData[]> => {
   try {
-    const response = await fetch("http://localhost:3001/items", {
+    const response = await fetch("https://ensinio-fakeapi.vercel.app/items", {
       method: 'GET',
     });
 

@@ -33,6 +33,7 @@ const fadeInAnimation = keyframes`
 const SolutionsPopUpContainer = styled.div`
     width: 643px;
     height: 263px;
+    padding: 2.75rem;
     border-radius: 6px;
     background-color: ${props => props.theme.colors.white};
     display: flex;
@@ -48,10 +49,13 @@ const SolutionsPopUpContainer = styled.div`
 
 // div that contains all Solutions Cards
 const CardsContainer = styled.div`
-    width: 535px;
-    height: 120px;
-    display: flex;
-    flex-wrap: wrap;
+    width: 547px;
+    height: 100px;
+    display: grid;
+     grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(0, 1fr);
+    column-gap: 77px;
+    row-gap: 40px;
     justify-content: space-between;
     align-content: space-between;
 `;
@@ -59,16 +63,16 @@ const CardsContainer = styled.div`
 const STitleContainer = styled.div`
     width: 547px;
     height: auto;
-    align-items: start;
     padding-bottom: 2.5rem;
 `;
 
+
+// div that contains all content inside the solutions popup
 const SPopUpContent = styled.div`
     height: 175px;
-    width: 535px;
+    width: 547px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
 `;
 
 export {
