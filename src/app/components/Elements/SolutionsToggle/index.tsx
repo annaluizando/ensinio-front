@@ -24,7 +24,6 @@ export default function SolutionsToggle() {
 
     return (
         <>
-            {/* "solution" text that appears on navbar and it's toggle icon */}
             <SolutionsContainer onMouseEnter={handleSolutionsOn} onMouseLeave={handleSolutionsOff}>
                 <a><Text color="white" $size="small" $weight="medium">{t('navbar.solutions')}</Text></a>
                 <ToggleButton>
@@ -32,7 +31,6 @@ export default function SolutionsToggle() {
                 </ToggleButton>
             </SolutionsContainer>
 
-            {/* conditional that renders or not the popup itself */}
             {solutions && (
                 <SolutionsPopUpContainer>
                     <SPopUpContent>

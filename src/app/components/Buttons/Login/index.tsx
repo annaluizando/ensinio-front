@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Text } from "../../Elements/text";
 import styled from "styled-components";
-import { LanguageMenuProps } from "@/app/types/elements/LanguageMenu";
 import { useTranslation } from "next-i18next";
 
 

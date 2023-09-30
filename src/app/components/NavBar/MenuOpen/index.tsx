@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Text } from "../../Elements/text";
-import SolutionsToggle from "../../Elements/SolutionsToggle";
 import LanguageMenu from "../../Elements/LanguageMenu";
 import Login from "../../Buttons/Login";
 

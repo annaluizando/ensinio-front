@@ -8,7 +8,6 @@ import IntroImage from "@/app/components/Elements/IntroImage";
 import wplaylist_icon from "../../../../../public/assets/icons/icon-playlistsw.svg";
 import certified_icon from "../../../../../public/assets/icons/icon-certified.svg";
 import { useTranslation } from "next-i18next";
-import { EmptyBtn } from "../../Buttons/EmptyBtn";
 
 
 export default function UpperSection() {
@@ -17,7 +16,6 @@ export default function UpperSection() {
     return (
         <SectionContainer>
 
-            {/* div that contains all decoration icons that are in top of UpperSection */}
             <DesignIconsContainer>
                 <Image src={wplaylist_icon} width={82.50} height={82.50} alt="design-icons" className="icon-play" />
                 <Image src={certified_icon} width={67.355} height={67.355} alt="design-icons" className="icon-cert" />

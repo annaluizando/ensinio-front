@@ -33,13 +33,11 @@ export default function LanguageMenu({ textColor = "white" }: LanguageMenuProps)
 
     return (
         <LanguageContainer onMouseEnter={handleLanguageMenu} onMouseLeave={handleLanguageMenu} onClick={handleLanguageMenu}>
-            {/* current language that is being used in site and it's toggle button */}
             <Text $size="x_small" $weight="medium" color={textColor} $case="upper">{locale}</Text>
             <ToggleButton>
                 <Image src={polygon} width={10} height={8} alt="toggle" />
             </ToggleButton>
 
-            {/* condition responsable for showing or not the popup itself */}
             {languageMenu && (
                 <LangPopUpContainer>
                     <SelectedContainer>
