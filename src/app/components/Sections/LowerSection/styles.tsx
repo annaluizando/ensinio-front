@@ -34,10 +34,11 @@ const ResourcesGroupContainer = styled.div`
     justify-content: space-between;
     margin-bottom: 4.188rem;
     margin-top: 4.188rem;
+
     @media (max-width: 1135px) {
       flex-direction: column;
         height: auto;
-        gap: 5rem;
+        gap: 1.5rem;
     }
     
 `;
@@ -57,12 +58,6 @@ const FooterContainer = styled.div`
         justify-content: flex-end;
     }
 
-    /* @media (min-width: 322px) and (max-width: 770px) {
-      flex-direction: column;
-      height: 120px;
-      align-items: flex-start;
-    } */
-
     @media (max-width: 322px) {
       flex-direction: column;
       height: 100%;
@@ -77,10 +72,6 @@ const RocketContainer = styled.div`
     gap: 2rem;
     display: flex;
     align-items: center;
-/*     
-    @media (max-width: 580px) {
-        width: 90%;
-    } */
 `;
 
 
@@ -104,6 +95,7 @@ const DetailsContainer = styled.div`
     display: flex;
     gap: 1rem;
     align-items: center;
+    
     @media (max-width: 390px) {
         width: 100%;
     }

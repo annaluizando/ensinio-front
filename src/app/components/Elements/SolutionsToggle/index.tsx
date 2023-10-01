@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Polygon from "@/public/assets/shapes/polygon.svg";
+
 import { CardsContainer, SPopUpContent, STitleContainer, SolutionsContainer, SolutionsPopUpContainer, ToggleButton } from "./styles";
+
 import { Text } from "../text";
 import SolutionsCard from "@/components/SolutionsCard";
 import { useState } from "react";
@@ -17,6 +19,7 @@ export default function SolutionsToggle() {
     function handleSolutionsOn() {
         setSolutions(true);
     }
+
     function handleSolutionsOff() {
         setSolutions(false);
     }

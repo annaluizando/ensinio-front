@@ -32,7 +32,7 @@ export default function LanguageMenu({ textColor = "white" }: LanguageMenuProps)
 
     // function that happens when user selects a language in the lang pop-up menu 
     function handleLanguageSelect(languageCode: string) {
-        // to change locale, that changes page language, using "push" that is provided by useRouter
+        // to change locale, that changes page language, using "push" that comes from useRouter
         push('/', undefined, { locale: languageCode });
         setPopUp(false);
         setCookie(languageCode);

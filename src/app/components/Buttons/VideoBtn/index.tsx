@@ -23,8 +23,6 @@ const VideoBtnContainer = styled.div`
     }
 `;
 
-
-
 export default function VideoBtn() {
     const { t } = useTranslation('common')
 

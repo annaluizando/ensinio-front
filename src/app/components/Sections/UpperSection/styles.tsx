@@ -10,7 +10,7 @@ const SectionContainer = styled.div`
     }
 `;
 
-const IntroContainer = styled.div`
+const UpperContentContainer = styled.div`
     width: 87.50%;
     height: 100%;
     display: grid;
@@ -59,11 +59,6 @@ const TextContainer = styled.div`
     gap: 2.75rem;
     margin-bottom: 3rem;
     margin-top: 2.75rem;
-
-    /* @media (max-width: 470px) {
-        width: 95%;
-        height: 70%;
-    } */
 `;
 
 const DesignIconsContainer = styled.div`
@@ -116,7 +111,7 @@ const USContentContainer = styled.div`
 
 export {
     SectionContainer,
-    IntroContainer,
+    UpperContentContainer as IntroContainer,
     DevicesContainer,
     ButtonsContainer,
     TextContainer,

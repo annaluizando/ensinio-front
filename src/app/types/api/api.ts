@@ -4,15 +4,17 @@ export const getCard = async (): Promise<ResourceData[]> => {
       method: 'GET',
     });
 
+    if (!response.ok) {
+      throw new Error(`Request failed with status ${response.status}`);
+    }
     const data = await response.json();
 
     if (data.length > 0) {
       return data;
     } else if (data.error) {
-      console.log("Error");
+      throw new Error("Response data is empty");
     }
   } catch (err) {
-    console.error("An error occurred:", err);
     throw err;
   }
 

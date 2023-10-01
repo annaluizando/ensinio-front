@@ -1,5 +1,13 @@
 interface ResourceData {
   id: number;
-  title: any;
-  description: any;
+  title: {
+    pt: string;
+    es: string;
+    en: string;
+  } | any,
+  description: {
+    pt: string;
+    es: string;
+    en: string;
+  } | any;
 }

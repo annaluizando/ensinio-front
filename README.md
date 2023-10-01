@@ -35,7 +35,7 @@ Abaixo estão instruções de como rodar o projeto localmente.
   cd ensinio-front
 ```
 
-3. Instale as packages necessárias
+3. Instale os packages necessários
 
 ```bash
   npm install
@@ -62,16 +62,13 @@ https://ensinio-front.vercel.app/
 ## 🚀 Roadmap / Jornada
 
 - Desenvolvimento da tela
-
 - Adição dos Pop-Up's
-
 - Ajustes na responsividade
-
 - Adição da funcionalidade de internacionalização
-
 - Configuração dos cookies
-
 - Adição de comentários necessários no código
+- Revisão de código
+- Testes unitários
 
 ## ⚗️ Apêndice
 
