@@ -2,17 +2,15 @@ import styled, { keyframes } from "styled-components";
 
 
 const ToggleButton = styled.button<ToggleButtonProps>`
-  width: 10px;
-  height: ${props => (props.rotate ? 'auto' : '8px')};
-  transform: ${props => (props.rotate ? 'rotate(180deg)' : 'none')};
   border: none;
+  padding-left: 0.75rem;
   background-color: transparent;
   cursor: pointer;
 `;
 
 // div responsable for all things that envolves language menu, the name of current language + popup
 const LanguageContainer = styled.div`
-  width: 38px;
+  width: auto;
   height: 40px;
   display: flex;
   flex-wrap: wrap;
@@ -21,6 +19,11 @@ const LanguageContainer = styled.div`
   background-color: transparent;
   border: none;
   cursor: pointer;
+  &:hover {
+    ${ToggleButton} {
+    transform: rotateX(180deg);
+    }
+  }
 `;
 
 

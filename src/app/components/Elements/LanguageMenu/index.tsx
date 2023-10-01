@@ -26,9 +26,14 @@ export default function LanguageMenu({ textColor = "white" }: LanguageMenuProps)
         document.cookie = `NEXT_LOCALE=${locale}; max-age=31536000; path=/`
     }
 
-    function handlePopUp() {
-        setPopUp(!popup);
+    function LangPopUpOn() {
+        setPopUp(true);
     }
+
+    function LangPopUpOff() {
+        setPopUp(false);
+    }
+
 
     // function that happens when user selects a language in the lang pop-up menu 
     function handleLanguageSelect(languageCode: string) {
@@ -39,17 +44,12 @@ export default function LanguageMenu({ textColor = "white" }: LanguageMenuProps)
     }
 
     return (
-        <LanguageContainer onClick={handlePopUp}>
+        <LanguageContainer onMouseEnter={LangPopUpOn} onMouseLeave={LangPopUpOff}>
             <Text $size="x_small" $weight="medium" color={textColor} $case="upper">{locale}</Text>
-            {popup ? (
-                <ToggleButton rotate>
-                    <Image src={Polygon} width={10} height={8} alt="toggle" />
-                </ToggleButton>
-            ) : (
-                <ToggleButton>
-                    <Image src={Polygon} width={10} height={8} alt="toggle" />
-                </ToggleButton>
-            )}
+
+            <ToggleButton>
+                <Image src={Polygon} width={10} height={8} alt="toggle" />
+            </ToggleButton>
 
             {popup && (
                 <LangPopUpContainer>

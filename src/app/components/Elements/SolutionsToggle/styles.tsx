@@ -6,10 +6,6 @@ const ToggleButton = styled.button`
   padding-left: 0.75rem;
   background-color: transparent;
   cursor: pointer;
-  &:hover {
-      transform: rotateX(180deg);
-      transition: ease-in-out 0.3s;
-  }
 `;
 
 // div of solutions button (text + icon) 
