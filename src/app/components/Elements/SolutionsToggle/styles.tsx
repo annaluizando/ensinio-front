@@ -56,7 +56,6 @@ const SolutionsPopUpContainer = styled.div`
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
     animation-name: ${fadeInAnimation};
-    transition: ease-in-out;
 `;
 
 // div that contains all Solutions Cards

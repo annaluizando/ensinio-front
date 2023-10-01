@@ -7,4 +7,5 @@ export interface TextProps {
   $family?: FontFamily;
   $case?: TextCase;
   $spacing?: TextSpacing;
+  $padding?: string;
 }

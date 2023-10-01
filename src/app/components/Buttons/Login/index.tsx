@@ -12,13 +12,13 @@ const LoginContainer = styled.div`
     cursor: pointer;
 `;
 
-export default function Login({ textColor = "white", textWeight = "semibold" }: LanguageMenuProps): JSX.Element {
+export default function Login({ textColor = "white", textWeight = "semibold", padding = "0 0.5rem" }: LanguageMenuProps): JSX.Element {
     const { t } = useTranslation('common')
 
     return (
         <LoginContainer>
             <Image src="./assets/icons/user-profile.svg" alt="profile-icon" height={20} width={20} />
-            <Text $size="x_small" color={textColor} $weight={textWeight} $padding="0 0.5rem">{t('navbar.login')}</Text>
+            <Text $size="x_small" color={textColor} $weight={textWeight} $padding={padding}>{t('navbar.login')}</Text>
         </LoginContainer>
     )
 }
