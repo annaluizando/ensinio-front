@@ -2,7 +2,7 @@ import Image from "next/image";
 import LineBlue from "@/public/assets/shapes/line_blue.svg";
 import MenuIcon from "@/public/assets/icons/menu_icon.svg";
 
-import { MenuBtn, MenuContainer, NavBarContainer, NavBarContentContainer, PagesContainer } from "./styles";
+import { Logo, MenuBtn, MenuContainer, NavBarContainer, NavBarContentContainer, PagesContainer } from "./styles";
 
 import { Text } from "@/components/Elements/text";
 import { EmptyBtn } from "@/components/Buttons/EmptyBtn";
@@ -26,7 +26,9 @@ export default function NavBar() {
         <NavBarContainer>
             <NavBarContentContainer>
 
-                <Image draggable="false" src="./logo.svg" height={40} width={159} alt="Ensinio-Logo" />
+                <Logo href="#">
+                    <Image draggable="false" src="./logo.svg" height={40} width={159} alt="Ensinio-Logo" />
+                </Logo>
 
                 <MenuContainer>
 

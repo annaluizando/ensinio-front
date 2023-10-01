@@ -32,23 +32,23 @@ export default function SolutionsToggle() {
                 <ToggleButton>
                     <Image src={Polygon} width={10} height={8} alt="toggle" />
                 </ToggleButton>
-            </SolutionsContainer>
 
-            {solutions && (
-                <SolutionsPopUpContainer onMouseLeave={handleSolutionsOff}>
-                    <SPopUpContent>
-                        <STitleContainer>
-                            <Text $spacing="wide" $size="xx_small" $weight="semibold" $case="upper" color="purple_pure">{t('solpopup.title')}</Text>
-                        </STitleContainer>
-                        <CardsContainer>
-                            <SolutionsCard $url="./assets/icons/ead.svg" title={t('solpopup.create')} description="Lorem ipsum dolor sit amet" />
-                            <SolutionsCard $url="./assets/icons/icon-social.svg" title={t('solpopup.social')} description="Lorem ipsum dolor sit amet" />
-                            <SolutionsCard $url="./assets/icons/icon-gamification.svg" title={t('solpopup.gamefication')} description="Lorem ipsum dolor sit amet" />
-                            <SolutionsCard $url="./assets/icons/icon-app.svg" title={t('solpopup.mobile')} description="Lorem ipsum dolor sit amet" />
-                        </CardsContainer>
-                    </SPopUpContent>
-                </SolutionsPopUpContainer>
-            )}
+                {solutions && (
+                    <SolutionsPopUpContainer>
+                        <SPopUpContent>
+                            <STitleContainer>
+                                <Text $spacing="wide" $size="xx_small" $weight="semibold" $case="upper" color="purple_pure">{t('solpopup.title')}</Text>
+                            </STitleContainer>
+                            <CardsContainer>
+                                <SolutionsCard $url="./assets/icons/ead.svg" title={t('solpopup.create')} description="Lorem ipsum dolor sit amet" />
+                                <SolutionsCard $url="./assets/icons/icon-social.svg" title={t('solpopup.social')} description="Lorem ipsum dolor sit amet" />
+                                <SolutionsCard $url="./assets/icons/icon-gamification.svg" title={t('solpopup.gamefication')} description="Lorem ipsum dolor sit amet" />
+                                <SolutionsCard $url="./assets/icons/icon-app.svg" title={t('solpopup.mobile')} description="Lorem ipsum dolor sit amet" />
+                            </CardsContainer>
+                        </SPopUpContent>
+                    </SolutionsPopUpContainer>
+                )}
+            </SolutionsContainer>
         </>
     )
 }

@@ -11,13 +11,14 @@ const ToggleButton = styled.button`
 // div of solutions button (text + icon) 
 const SolutionsContainer = styled.div`
     width: auto;
-    height: 16px;
+    height: 40px;
     display: flex;
     justify-content: space-between;
-    cursor: pointer;
+    align-items: center;
     background-color: transparent;
     border: none;
     transition: ease-in-out 0.3s;
+    cursor: pointer;
     
     &:hover {
       ${ToggleButton} {
@@ -54,6 +55,7 @@ const SolutionsPopUpContainer = styled.div`
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
     animation-name: ${fadeInAnimation};
+    cursor: default;
 `;
 
 // div that contains all Solutions Cards
@@ -61,7 +63,7 @@ const CardsContainer = styled.div`
     width: 547px;
     height: 100px;
     display: grid;
-     grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: minmax(0, 1fr);
     column-gap: 77px;
     row-gap: 40px;

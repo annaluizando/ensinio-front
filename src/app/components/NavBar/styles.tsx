@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+const Logo = styled.a`
+    cursor: pointer;
+`;
+
 // div that contains all content that is inside navbar, even ensinio's logo
 const NavBarContainer = styled.div`
     height: 80px;
@@ -51,9 +55,10 @@ const NavBarContentContainer = styled.div`
 // div that contains the options of navegation
 const PagesContainer = styled.div`
     width: 456px;
-    height: auto;
+    height: 40px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 `;
 
 export {
@@ -62,4 +67,5 @@ export {
     MenuBtn,
     NavBarContentContainer,
     PagesContainer,
+    Logo
 }
