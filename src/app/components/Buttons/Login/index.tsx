@@ -5,11 +5,10 @@ import { useTranslation } from "next-i18next";
 
 
 const LoginContainer = styled.div`
-    width: 73px;
+    width: auto;
     height: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     cursor: pointer;
 `;
 
@@ -19,7 +18,7 @@ export default function Login({ textColor = "white", textWeight = "semibold" }: 
     return (
         <LoginContainer>
             <Image src="./assets/icons/user-profile.svg" alt="profile-icon" height={20} width={20} />
-            <Text $size="x_small" color={textColor} $weight={textWeight}>{t('navbar.login')}</Text>
+            <Text $size="x_small" color={textColor} $weight={textWeight} $padding="0 0.5rem">{t('navbar.login')}</Text>
         </LoginContainer>
     )
 }

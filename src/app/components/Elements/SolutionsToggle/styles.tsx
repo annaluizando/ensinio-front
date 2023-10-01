@@ -1,7 +1,6 @@
 import styled, { keyframes } from "styled-components";
 
 
-
 const ToggleButton = styled.button`
   border: none;
   padding-left: 0.75rem;
@@ -57,6 +56,7 @@ const SolutionsPopUpContainer = styled.div`
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
     animation-name: ${fadeInAnimation};
+    transition: ease-in-out;
 `;
 
 // div that contains all Solutions Cards
