@@ -1,5 +1,4 @@
-
-export interface SolutionsCardProps {
+interface SolutionsCardProps {
     title: string;
     description: string;
     $url: string;

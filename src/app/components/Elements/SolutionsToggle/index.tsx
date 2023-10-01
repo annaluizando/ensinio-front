@@ -1,9 +1,9 @@
-import { Text } from "../text";
-import { useState } from "react";
-import polygon from "@/public/assets/shapes/polygon.svg";
 import Image from "next/image";
-import SolutionsCard from "@/components/SolutionsCard";
+import Polygon from "@/public/assets/shapes/polygon.svg";
 import { CardsContainer, SPopUpContent, STitleContainer, SolutionsContainer, SolutionsPopUpContainer, ToggleButton } from "./styles";
+import { Text } from "../text";
+import SolutionsCard from "@/components/SolutionsCard";
+import { useState } from "react";
 import { useTranslation } from "next-i18next";
 
 
@@ -27,7 +27,7 @@ export default function SolutionsToggle() {
             <SolutionsContainer onMouseEnter={handleSolutionsOn} onMouseLeave={handleSolutionsOff}>
                 <a><Text color="white" $size="small" $weight="medium">{t('navbar.solutions')}</Text></a>
                 <ToggleButton>
-                    <Image src={polygon} width={10} height={8} alt="toggle" />
+                    <Image src={Polygon} width={10} height={8} alt="toggle" />
                 </ToggleButton>
             </SolutionsContainer>
 

@@ -21,10 +21,11 @@ const SolutionsContainer = styled.div`
     cursor: pointer;
     background-color: transparent;
     border: none;
+    transition: ease-in-out 0.3s;
+    
     &:hover {
       ${ToggleButton} {
       transform: rotateX(180deg);
-      transition: ease-in-out 0.3s;
       }
     }
 `;
@@ -53,6 +54,7 @@ const SolutionsPopUpContainer = styled.div`
     justify-content: center;
     position: absolute;
     top: 3.5rem;
+    transition: ease-in-out 5s;
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
     animation-name: ${fadeInAnimation};

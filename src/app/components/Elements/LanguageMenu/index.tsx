@@ -1,25 +1,23 @@
 import Image from "next/image";
+import Polygon from "@/public/assets/shapes/polygon.svg";
+import Checked from "@/public/assets/shapes/checkmark-square.svg";
+import Brazil from "@/public/assets/icons/brazil.svg";
+import Usa from "@/public/assets/icons/usa.svg";
+import Spain from "@/public/assets/icons/spain.svg";
+
 import { Text } from "@/components/Elements/text";
 import { useState } from "react";
-import polygon from "@/public/assets/shapes/polygon.svg";
-import checked from "@/public/assets/shapes/checkmark-square.svg";
-import brazil from "@/public/assets/icons/brazil.svg";
-import usa from "@/public/assets/icons/usa.svg";
-import spain from "@/public/assets/icons/spain.svg";
 import { LangItem, LangPopUpContainer, LanguageContainer, MiniLangContainer, SelectedContainer, SelectedContent, ToggleButton } from "./styles";
 import { useRouter } from "next/router";
 
 export default function LanguageMenu({ textColor = "white" }: LanguageMenuProps): JSX.Element {
-    // const [hover, setHover] = useState(false);
-    // const [click, setClick] = useState(false);
-
     const [popup, setPopUp] = useState(false);
     const { locale, push } = useRouter();
 
     const languages = [
-        { code: "pt", icon: brazil },
-        { code: "en", icon: usa },
-        { code: "es", icon: spain },
+        { code: "pt", icon: Brazil },
+        { code: "en", icon: Usa },
+        { code: "es", icon: Spain },
     ];
 
 
@@ -27,14 +25,6 @@ export default function LanguageMenu({ textColor = "white" }: LanguageMenuProps)
     const setCookie = (locale: string) => {
         document.cookie = `NEXT_LOCALE=${locale}; max-age=31536000; path=/`
     }
-
-    // function handleLMenuHover() {
-    //     setHover(!hover);
-    // }
-
-    // function handleLMenuClick() {
-    //     setClick(!click)
-    // }
 
     function handlePopUp() {
         setPopUp(!popup);
@@ -46,8 +36,6 @@ export default function LanguageMenu({ textColor = "white" }: LanguageMenuProps)
         push('/', undefined, { locale: languageCode });
         setPopUp(false);
         setCookie(languageCode);
-        // setClick(false);
-        // setHover(false)
     }
 
     return (
@@ -55,11 +43,11 @@ export default function LanguageMenu({ textColor = "white" }: LanguageMenuProps)
             <Text $size="x_small" $weight="medium" color={textColor} $case="upper">{locale}</Text>
             {popup ? (
                 <ToggleButton rotate>
-                    <Image src={polygon} width={10} height={8} alt="toggle" />
+                    <Image src={Polygon} width={10} height={8} alt="toggle" />
                 </ToggleButton>
             ) : (
                 <ToggleButton>
-                    <Image src={polygon} width={10} height={8} alt="toggle" />
+                    <Image src={Polygon} width={10} height={8} alt="toggle" />
                 </ToggleButton>
             )}
 
@@ -79,7 +67,7 @@ export default function LanguageMenu({ textColor = "white" }: LanguageMenuProps)
                                 </MiniLangContainer>
                                 {locale === language.code && (
                                     <SelectedContent>
-                                        <Image src={checked} height={20} width={20} alt="checked" />
+                                        <Image src={Checked} height={20} width={20} alt="checked" />
                                     </SelectedContent>
                                 )}
                             </LangItem>

@@ -1,5 +1,5 @@
-import { ButtonProps } from "@/app/types/elements/ButtonProps";
 import styled from "styled-components";
+import { ButtonProps } from "@/app/types/elements/ButtonProps";
 
 
 export const FullBtn = styled.button<ButtonProps>`

@@ -1,14 +1,17 @@
 import Image from "next/image";
+import LineBlue from "@/public/assets/shapes/line_blue.svg";
+import MenuIcon from "@/public/assets/icons/menu_icon.svg";
+
 import { MenuBtn, MenuContainer, NavBarContainer, NavBarContentContainer, PagesContainer } from "./styles";
+
 import { Text } from "@/components/Elements/text";
 import { EmptyBtn } from "@/components/Buttons/EmptyBtn";
-import { useState } from "react";
-import Login from "@/components/Buttons/Login";
-import SolutionsToggle from "../Elements/SolutionsToggle";
-import line_blue from "@/public/assets/shapes/line_blue.svg";
+import SolutionsToggle from "@/components/Elements/SolutionsToggle";
 import LanguageMenu from "@/components/Elements/LanguageMenu";
-import menuIcon from "@/public/assets/icons/menu_icon.svg";
+import Login from "@/app/components/Buttons/LoginBtn";
 import MenuOpen from "./MenuOpen";
+
+import { useState } from "react";
 import { useTranslation } from "next-i18next";
 
 export default function NavBar() {
@@ -35,7 +38,7 @@ export default function NavBar() {
                         <a href=""><Text color="white" $size="small" $weight="medium">{t('navbar.contact')}</Text></a>
                     </PagesContainer>
 
-                    <Image src={line_blue} width={1} height={24} alt="line" />
+                    <Image src={LineBlue} width={1} height={24} alt="line" />
 
                     <Login />
 
@@ -46,7 +49,7 @@ export default function NavBar() {
                 </MenuContainer>
             </NavBarContentContainer>
 
-            <MenuBtn onClick={handleMenu}><Image src={menuIcon} width={24} height={24} alt="menu-icon" /></MenuBtn>
+            <MenuBtn onClick={handleMenu}><Image src={MenuIcon} width={24} height={24} alt="menu-icon" /></MenuBtn>
             {menu && (
                 <>
                     <MenuOpen />

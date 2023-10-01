@@ -1,3 +1,3 @@
-export interface IconProps {
+interface IconProps {
     $url: string;
 }

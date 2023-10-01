@@ -1,9 +1,6 @@
-import { ResourcesCardProps } from "@/app/types/elements/ResourceCardsProps";
 import { Text } from "../Elements/text";
 import { RTextContainer, ResourcesContainer, ResourcesIcon } from "./styles";
 import { useTranslation } from "next-i18next";
-
-
 
 export default function ResourcesCard({ data, $url }: ResourcesCardProps) {
     const { title, description } = data;

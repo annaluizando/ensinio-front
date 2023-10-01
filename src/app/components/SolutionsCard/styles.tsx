@@ -1,5 +1,4 @@
-import { IconProps } from "@/app/types/elements/IconProps";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 const SolutionsCardContainer = styled.div`
     display : flex;

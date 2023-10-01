@@ -1,13 +1,14 @@
-import ResourcesCard from "@/components/ResourcesCard";
-import { DetailsContainer, DetailsnResourcesContainer, FooterContainer, LSContentContainer, LongLine, LowerSectionContainer, ResourcesGroupContainer, RocketContainer, SeeMoreContainer, UpperContainer } from "./styles";
-import { Text } from "@/components/Elements/text";
 import Image from "next/image";
-import rocket from "@/public/assets/icons/rocket.svg";
-import arrow from "@/public/assets/shapes/arrow.svg";
-import line_purple from "@/public/assets/shapes/line_purple.svg";
+import RocketIcon from "@/public/assets/icons/rocket.svg";
+import ArrowIcon from "@/public/assets/shapes/arrow.svg";
+import LinePurple from "@/public/assets/shapes/line_purple.svg";
+
+import { DetailsContainer, DetailsnResourcesContainer, FooterContainer, LSContentContainer, LongLine, LowerSectionContainer, ResourcesGroupContainer, RocketContainer, SeeMoreContainer, UpperContainer } from "./styles";
+import ResourcesCard from "@/components/ResourcesCard";
+import { Text } from "@/components/Elements/text";
+
 import { useEffect, useState } from 'react';
 import { getCard } from "@/app/types/api/api";
-import { ResourceData } from "@/app/types/elements/ResourcesCard";
 import { useTranslation } from "next-i18next";
 
 
@@ -35,7 +36,7 @@ export default function LowerSection() {
                 <UpperContainer>
                     <DetailsnResourcesContainer>
                         <DetailsContainer>
-                            <Image src={line_purple} width={40} height={1} alt="line" />
+                            <Image src={LinePurple} width={40} height={1} alt="line" />
                             <Text $case="upper" $spacing="wider" $size="small" $weight="semibold" color="purple_dark">{t('lower_section.details')}</Text>
                         </DetailsContainer>
                         <Text>{t('lower_section.resources')}</Text>
@@ -54,13 +55,13 @@ export default function LowerSection() {
 
                 <FooterContainer>
                     <RocketContainer>
-                        <Image src={rocket} height={32} width={32} alt="rocket" />
+                        <Image src={RocketIcon} height={32} width={32} alt="rocket" />
                         <Text $size="small" $weight="medium" color="gray">{t('lower_section.rocket')}</Text>
                     </RocketContainer>
 
                     <SeeMoreContainer>
                         <Text $size="small" $weight="semibold" color="purple_pure">{t('lower_section.seemore')}</Text>
-                        <Image className="bounce" src={arrow} width={24} height={32} alt="see-more"></Image>
+                        <Image className="bounce" src={ArrowIcon} width={24} height={32} alt="see-more"></Image>
                     </SeeMoreContainer>
                 </FooterContainer>
             </LSContentContainer>

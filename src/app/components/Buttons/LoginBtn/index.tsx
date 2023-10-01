@@ -1,18 +1,20 @@
 import Image from "next/image";
-import { Text } from "../../Elements/text";
+import { Text } from "@/components/Elements/text";
 import styled from "styled-components";
 import { useTranslation } from "next-i18next";
 
 
-const LoginContainer = styled.div`
+const LoginContainer = styled.button`
     width: auto;
     height: 20px;
     display: flex;
     align-items: center;
+    background-color: transparent;
+    border: none;
     cursor: pointer;
 `;
 
-export default function Login({ textColor = "white", textWeight = "semibold", padding = "0 0.5rem" }: LanguageMenuProps): JSX.Element {
+export default function LoginBtn({ textColor = "white", textWeight = "semibold", padding = "0 0.5rem" }: LanguageMenuProps): JSX.Element {
     const { t } = useTranslation('common')
 
     return (

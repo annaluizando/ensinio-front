@@ -1,9 +1,5 @@
 import styled, { keyframes } from "styled-components";
 
-interface ToggleButtonProps {
-  rotate?: boolean;
-}
-
 
 const ToggleButton = styled.button<ToggleButtonProps>`
   width: 10px;

@@ -1,0 +1,3 @@
+interface ToggleButtonProps {
+  rotate?: boolean;
+}

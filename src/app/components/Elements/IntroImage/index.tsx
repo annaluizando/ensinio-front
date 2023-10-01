@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import introImage from "@/public/stockphoto.svg";
-import introShape from "@/public/assets/shapes/elipse.svg";
+import IntroImageIcon from "@/public/stockphoto.svg";
+import IntroShapeIcon from "@/public/assets/shapes/elipse.svg";
 import Image from "next/image";
 
 const IntroContainer = styled.div`
@@ -10,8 +10,6 @@ const IntroContainer = styled.div`
     position: absolute;
     bottom: 0;
     right: 0;
-    @media (min-width: 1135px) and (max-width: 1250px) {
-    }
 
     @media (max-width: 1135px) {
       display: none;
@@ -40,11 +38,11 @@ export default function IntroImage() {
     return (
         <IntroContainer>
             <IntroMainImage>
-                <Image src={introImage} width={529} height={533} alt="main-image" />
+                <Image src={IntroImageIcon} width={529} height={533} alt="main-image" />
             </IntroMainImage>
 
             <IntroShape>
-                <Image src={introShape} width={659} height={533} alt="shape" />
+                <Image src={IntroShapeIcon} width={659} height={533} alt="shape" />
             </IntroShape>
         </IntroContainer>
     )

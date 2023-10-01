@@ -1,4 +1,3 @@
-import { IconProps } from "@/app/types/elements/IconProps";
 import styled, { keyframes } from "styled-components";
 
 const fadeInAnimation = keyframes`
@@ -56,7 +55,7 @@ const RTextContainer = styled.div`
 `;
 
 export {
-    ResourcesContainer,
-    ResourcesIcon,
-    RTextContainer,
+  ResourcesContainer,
+  ResourcesIcon,
+  RTextContainer,
 }
