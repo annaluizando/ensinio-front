@@ -53,6 +53,12 @@ Abaixo estão instruções de como rodar o projeto localmente.
    npm run dev
 ```
 
+6. Caso queira rodar testes
+
+```bash
+   npm run test
+```
+
 ## 💻 Deploy
 
 Esse projeto está hospedado na plataforma Vercel, você pode dar uma olhada nele por meio do seguinte link:
